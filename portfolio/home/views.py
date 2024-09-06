@@ -17,7 +17,7 @@ def contactadd(request):
             mail=request.POST['mail']
             number=request.POST['number']
             message=request.POST['message']
-            print(name,mail,contact,message)
+            print(name,mail,number,message)
             data=Contact.objects.all()
             print("added")
             return render(request,'contact.html')    
