@@ -18,6 +18,8 @@ def contactadd(request):
             number=request.POST['number']
             message=request.POST['message']
             print(name,mail,number,message)
+            Contact.objects.create(name=name,email=mail,number=number,message=message)
+            return HttpResponse("Contact added successfully")
             print("added")
             return render(request,'contact.html')    
     except Exception as e:
