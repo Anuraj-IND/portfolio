@@ -19,8 +19,22 @@ def contactadd(request):
             message=request.POST['message']
             print(name,mail,number,message)
             Contact.objects.create(name=name,email=mail,number=number,message=message)
-            return HttpResponse("Contact added successfully")
             print("added")
             return render(request,'contact.html')    
     except Exception as e:
+        return HttpResponse(e)
+def message(request):
+    try:
+        message=Contact.objects.all()
+        return render(request,'messages.html',{'messages':message})
+    except Exception as e:
+        return HttpResponse(e)
+def deleted(request):
+    try:
+        del_id=request.GET['del_id']
+        dell=Contact.objects.get(id=del_id)
+        dell.delete()
+        return message(request)
+    except Exception as e:
+        print(e)
         return HttpResponse(e)
