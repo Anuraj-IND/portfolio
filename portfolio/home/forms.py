@@ -11,3 +11,9 @@ class ContactForm(forms.ModelForm):
             'number': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Phone Number', 'id': 'number', 'name': 'number'}),
             'message': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Your Message', 'id': 'message', 'name': 'message'}),
         }
+        labels = {
+            'name': 'Name?',
+            'email': 'Email Address',
+            'number': 'Contact Number',
+            'message': 'Any message for me?',
+        }

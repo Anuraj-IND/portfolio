@@ -44,20 +44,10 @@
         </h2>
         <form action="add_contact" method="POST">
           {% csrf_token %}
-          <!-- <div class="form-group">
-            <label >Name?</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name here" name="name">
-              <label>Email address</label>
-              <input type="email" class="form-control" id="mail" placeholder="name@example.com" name="mail">
-              <label >Contact Number</label>
-              <input type="text" class="form-control" id="number" placeholder="+91 23435xxxx" name="number">
-              <label>Any message for me?</label>
-              <textarea class="form-control" id="message" rows="3" placeholder="type your message here" name="message"></textarea>
-            </div> -->
               {{cfrm}}
             <input type="submit" class="btn btn-outline-success">
-          </div>
           </form>
+        </div>
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
