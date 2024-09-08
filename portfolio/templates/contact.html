@@ -42,27 +42,23 @@
         <h2>
             Contact me 
         </h2>
-        <form action="contact_saved" method="POST">
+        <form action="add_contact" method="POST">
           {% csrf_token %}
-          <div class="form-group">
-            <label for="name">Name?</label>
+          <!-- <div class="form-group">
+            <label >Name?</label>
             <input type="text" class="form-control" id="name" placeholder="Enter your name here" name="name">
-          </div>  
-          <div class="form-group">
-              <label for="email">Email address</label>
+              <label>Email address</label>
               <input type="email" class="form-control" id="mail" placeholder="name@example.com" name="mail">
-            </div>
-            <div class="form-group">
-              <label for="number">Contact Number</label>
+              <label >Contact Number</label>
               <input type="text" class="form-control" id="number" placeholder="+91 23435xxxx" name="number">
-            </div>
-            <div class="form-group">
-              <label for="message">Any message for me?</label>
+              <label>Any message for me?</label>
               <textarea class="form-control" id="message" rows="3" placeholder="type your message here" name="message"></textarea>
-            </div>
+            </div> -->
+              {{cfrm}}
             <input type="submit" class="btn btn-outline-success">
+          </div>
           </form>
-        </div>
+        
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <hr>
