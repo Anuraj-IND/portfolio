@@ -76,12 +76,6 @@ def add_contact(request):
                 return HttpResponse("User not found in the database")    
     else:
          return redirect('displaylogin')                                      
-# def contact(request):
-#      return render(request,'contact.html')
-# def about(request):
-#     return render(request,'about.html')
-# def project(request):
-#     return render(request,'project.html')        
               
 def message(request):
     if request.session.has_key('username') and request.session['password']:
@@ -99,7 +93,8 @@ def deleted(request):
                 del_name=request.GET['del_name']
                 if request.session['username'] == del_name:
                     dell=User_mod.objects.get(name=del_name)
-                    dell.delete()
+                    dell.message=None
+                    dell.save()#i want to delete message only not whole row of user how to do it?
                     return message(request)
                 else :
                     return message(request)    
@@ -107,3 +102,8 @@ def deleted(request):
                 print(e)
                 return HttpResponse(e)
                                      
+
+def about(request):
+    return render(request,'about.html')
+def project(request):
+    return render(request,'project.html')        
