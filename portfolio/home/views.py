@@ -22,12 +22,14 @@ def login(request):
     if request.method == 'POST':
         name=request.POST['name']
         password=request.POST['password']
+        mail=request.POST['email']
         try:
             
-            if User_mod.objects.filter(name=name,password=password):
+            if User_mod.objects.filter(name=name,password=password,email=mail):
                 request.session['username']=name
                 request.session['password']=password
-                return render(request, 'home.html', {'username':name, 'password':password})
+                request.session['email']=mail
+                return render(request, 'home.html', {'username':name, 'password':password,'email':mail})
             else:
                 ufrm=User_Form()
                 return render(request, 'login.html',{"ufrm":ufrm})
