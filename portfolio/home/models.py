@@ -15,5 +15,5 @@ class User_mod(models.Model):
     email=models.EmailField()
     password=models.CharField(max_length=20)
     number=models.CharField(max_length=12)
-    message=models.TextField()    
+    message=models.TextField(null=True, blank=True)    
      

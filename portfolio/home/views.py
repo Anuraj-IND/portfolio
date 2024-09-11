@@ -14,7 +14,8 @@ def signin(request):
                                 print("saved",ufrm)
                         return redirect('displaylogin')
                     except Exception as e:
-                        return HttpResponse(str(e))     
+                        ufrm=User1()
+                        return render(request,'signin.html',{"ufrm":ufrm})     
                     else:
                         return render(request,'signin.html')      
 def login(request):
@@ -82,12 +83,20 @@ def add_contact(request):
 # def project(request):
 #     return render(request,'project.html')        
               
-# def message(request):
-#     try:
-#         message=Contact.objects.all()
-#         return render(request,'messages.html',{'messages':message})
-#     except Exception as e:
-#         return HttpResponse(e)
+def message(request):
+    if request.session.has_key('username') and request.session['password']:
+        try:
+            message=User_mod.objects.filter(message__isnull=False)
+            
+            return render(request,'messages.html',{'messages':message})
+        except Exception as e:
+            return HttpResponse(e)
+    else:
+          return redirect('displaylogin')  
+
+
+
+
 # def deleted(request):
 #     try:
 #         del_id=request.GET['del_id']
