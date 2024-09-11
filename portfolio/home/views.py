@@ -94,16 +94,16 @@ def message(request):
     else:
           return redirect('displaylogin')  
 
-
-
-
-# def deleted(request):
-#     try:
-#         del_id=request.GET['del_id']
-#         dell=Contact.objects.get(id=del_id)
-#         dell.delete()
-#         return message(request)
-#     except Exception as e:
-#         print(e)
-#         return HttpResponse(e)
+def deleted(request): 
+            try:
+                del_name=request.GET['del_name']
+                if request.session['username'] == del_name:
+                    dell=User_mod.objects.get(name=del_name)
+                    dell.delete()
+                    return message(request)
+                else :
+                    return message(request)    
+            except Exception as e:
+                print(e)
+                return HttpResponse(e)
                                      
