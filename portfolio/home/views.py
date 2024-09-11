@@ -102,8 +102,13 @@ def deleted(request):
                 print(e)
                 return HttpResponse(e)
                                      
-
 def about(request):
-    return render(request,'about.html')
+    if request.session.has_key('username') and request.session['password']:
+      return render(request,'about.html')
+    else:
+          return redirect('displaylogin')  
 def project(request):
-    return render(request,'project.html')        
+  if request.session.has_key('username') and request.session['password']:  
+    return render(request,'project.html') 
+  else:
+          return redirect('displaylogin')         
