@@ -114,3 +114,9 @@ def project(request):
     return render(request,'project.html') 
   else:
           return redirect('displaylogin')         
+def logout(request):
+    if request.session.has_key('username'):
+        del request.session['username']
+        del request.session['password']
+        del request.session['email']
+    return redirect('displaylogin')
