@@ -58,9 +58,11 @@ def displaycontactform(request):
 def add_contact(request):
     if(1==1):
         username=request.session['username']
+        password=request.session['password']
+        mail=request.session['email']
         # password=request.session['password']
         try:
-                user = User_mod.objects.get(name=username)  # ye ban gaya objevt jiska name username se matvh karega
+                user = User_mod.objects.get(name=username,password=password,email=mail)  # ye ban gaya objevt jiska name username se matvh karega
                 if request.method == 'POST':
                     cfrm=ContactForm(request.POST)
                     try:
