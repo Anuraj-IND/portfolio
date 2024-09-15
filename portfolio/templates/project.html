@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,7 +8,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -15,51 +15,69 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="{%  static 'project.css' %}" />
     <title>Projects</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="message">Anuraj</a>
       <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about">About Me</a>
-          </li>
-          <li class="nav-item">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About Me</a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="project">My Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact">Contact us</a>
             </li>
-        </ul>            
-          <a href="logout"><button class="btn btn-outline-danger" type="button">Logout</button></a>
-
+          </ul>
+          <a href="logout"
+            ><button class="btn btn-outline-danger" type="button">
+              Logout
+            </button></a
+          >
+        </div>
       </div>
+    </nav>
+    <div class="sect">
+      <h5 class="highlight">PROJECTS</h5>
+      <h1>WHAT WE <span class="highlight">DO</span> ?</h1>
+      <hr />
+      <br />
     </div>
-  </nav>
     <div class="container my-3 justify-content-center align-items-center">
-      <h2 class="text-center mt-5 my-5 text-light">My Projects</h2>
+      <h2 class="text-center mt-5 my-5 text-light" style="font-weight: bold">
+        FEATURED PROJECTS
+      </h2>
       <div class="row">
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5 rounded" style="width: 18rem">
             <img
               src="https://picsum.photos/500/300"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Simple Offline Dictionary</h5>
+              <h2 class="card-title">Simple Offline Dictionary</h2>
               <p class="card-text">
                 A simple offline dictionary made by using Python can be
                 implemented as a command-line application that allows users to
@@ -77,17 +95,14 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5" style="width: 18rem">
             <img
               src="https://picsum.photos/501/301"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">AI Assistant</h5>
+              <h2 class="card-title">AI Assistant</h2>
               <p class="card-text">
                 An AI (Artificial Intelligence) Assistant made by Python
                 language refers to a software application or a system that uses
@@ -106,17 +121,14 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5" style="width: 18rem">
             <img
               src="https://picsum.photos/500/301"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Library Management Sys.(MySQL)</h5>
+              <h2 class="card-title">Library Management Sys.(MySQL)</h2>
               <p class="card-text">
                 A library management system (LMS) is a software application that
                 helps libraries manage their resources, including books,
@@ -134,17 +146,14 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5" style="width: 18rem">
             <img
               src="https://picsum.photos/502/301"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Porfolio</h5>
+              <h2 class="card-title">Porfolio</h2>
               <p class="card-text">
                 A portfolio is a collection of an individual's or a company's
                 work samples, projects, and other relevant information that
@@ -160,10 +169,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5" style="width: 18rem">
             <img
               src="https://picsum.photos/500/302"
               class="card-img-top"
@@ -185,10 +191,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div
-            class="card shadow-lg p-3 mb-5 bg-white rounded"
-            style="width: 18rem"
-          >
+          <div class="card shadow-lg p-3 mb-5" style="width: 18rem">
             <img
               src="https://picsum.photos/501/302"
               class="card-img-top"
