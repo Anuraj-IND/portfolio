@@ -95,8 +95,9 @@ def message(request):
 def deleted(request): 
             try:
                 del_name=request.GET['del_name']
+                del_id=request.GET['del_id']
                 if request.session['username'] == del_name:
-                    dell=User_mod.objects.get(name=del_name)
+                    dell=User_mod.objects.get(name=del_name,password=request.session['password'],email=request.session['email'],id=del_id)
                     dell.message=None
                     dell.save()#i want to delete message only not whole row of user how to do it?
                     return message(request)
@@ -104,7 +105,7 @@ def deleted(request):
                     return message(request)    
             except Exception as e:
                 print(e)
-                return HttpResponse(e)
+                return message(request)
                                      
 def about(request):
     if request.session.has_key('username') and request.session['password']:
