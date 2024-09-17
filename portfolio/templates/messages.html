@@ -10,10 +10,59 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <style>
+    body{
+    background-color: #070707;
+      }
+    .container{
+         background-color: black;
+    margin-bottom:4px;
+    padding: 16px;
+    font-size:15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
+      }
+   .highlight{
+        align-self: flex-start;
+        color: red;   }
+      hr{
+      background-color: red;
+    height: 2px;
+    float: inline-start;
+    width: 40%;
+    margin-top: -3px;
+     }
+     .btn{
+  background-color: rgb(214, 59, 59);
+  outline: none;
+  border:none;
+  color: white;
+}
+.btn:hover{
+    border-right:2px solid white;
+    border-bottom: 3px solid white;
+    background-color:black;
+    color: white;
+}
+th{
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    background-color:rgb(198 137 137 / 32%);
+    color: wheat;
+  border-radius: 0;
+}
+td{
+  background-color: rgb(146 64 64 / 70%);
+  color: white;
+}
+    </style>
   </head>
-  <body class="bg-secondary">
+  <body >
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="message">Anuraj</a>
+      <a class="navbar-brand" style="color: red;font-weight: 500;" href="message">Anuraj</a>
       <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,18 +79,18 @@
               <a class="nav-link" href="project">My Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact">Contact us</a>
+              <a class="nav-link" href="contact">Contact Me</a>
             </li>
         </ul>            
-          <a href="logout"><button class="btn btn-outline-danger" type="button">Logout</button></a>
-
+          <a href="logout"><button class="btn " type="button">Logout</button></a>
       </div>
     </div>
   </nav>
     <div>
-    <h2 style="color: azure;" class="position-relative my-5">Your messages and Testimonials:</h2>
+    <h2 style="color: azure; margin-top: 25px;" >What People <span class="highlight"> SAY </span>About Me?</h2>
+    <hr><br>
     <div class="table-responsive">
-      <table class="table table-striped table-hover table-dark">
+      <table class="table ">
         <tr>
           <th>ID</th>
           <th>Name</th>
@@ -55,7 +104,7 @@
           <td>{{ message.message }}</td>
           <td>
             <a href="delete?del_name={{message.name}}&del_id={{message.id}}"
-              ><button type="button" class="btn btn-dark">Delete</button></a
+              ><button type="button" class="btn ">Delete</button></a
             >
           </td>
         </tr>
@@ -80,3 +129,6 @@
     ></script>
   </body>
 </html>
+
+
+
