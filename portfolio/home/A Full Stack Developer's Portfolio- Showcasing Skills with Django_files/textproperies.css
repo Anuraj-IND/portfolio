@@ -1,0 +1,87 @@
+/* 
+Textproperties
+font-size: 60px
+text-align: center;
+text-shadow: 0 0 2px #00ff00;
+filter: grayscale(100%) etc...;
+*/
+
+
+/* 
+.simplecss #TITLE,
+.minimalistcss #TITLE {
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boldcss #TITLE {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+} */
+
+.elementmovecss #TITLE,
+.elementmovecss #SUBTITLE,
+.elementmovecss #SLIDE_LABEL,
+.geometriccirclecss #TITLE,
+.geometriccirclecss #SUBTITLE,
+.geometriccirclecss #SLIDE_LABEL,
+.fluidcss #TITLE,
+.fluidcss #SUBTITLE,
+.fluidcss #SLIDE_LABEL,
+.edgycss #TITLE,
+.edgycss #SUBTITLE,
+.edgycss #SLIDE_LABEL,
+.elegantcss #TITLE,
+.elegantcss #SUBTITLE,
+.elegantcss #SLIDE_LABEL,
+.minimalistcss #SUBTITLE,
+.minimalistcss #SLIDE_LABEL,
+.duotonecss #TITLE,
+.duotonecss #SUBTITLE,
+.duotonecss #SLIDE_LABEL {
+    text-align: center;
+}
+
+.simplecss #TITLE,
+.simplecss #SUBTITLE,
+.simplecss #SLIDE_LABEL,
+.boldcss #TITLE,
+.boldcss #SUBTITLE,
+.boldcss #SLIDE_LABEL,
+.classiccss #TITLE,
+.classiccss #SUBTITLE,
+.classiccss #SLIDE_LABEL,
+.crystalcss #TITLE,
+.crystalcss #SUBTITLE,
+.crystalcss #SLIDE_LABEL,
+.minimalcss #TITLE,
+.minimalcss #SUBTITLE,
+.minimalcss #SLIDE_LABEL,
+.keynotecss #TITLE,
+.keynotecss #SUBTITLE,
+.keynotecss #SLIDE_LABEL,
+.bubblecss #SUBTITLE,
+.bubblecss #SLIDE_LABEL,
+.cleancss #TITLE,
+.cleancss #SUBTITLE,
+.cleancss #SLIDE_LABEL,
+.theatlanticcss #TITLE,
+.theatlanticcss #SUBTITLE,
+.theatlanticcss #SLIDE_LABEL {
+    text-align: left;
+}
+
+.theatlanticcss #sgTitleNode {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.32);
+}
+
+.theatlanticcss #TITLE {
+    --text-txtshadow: 0px 4px 8px rgba(0, 0, 0, 0.32);
+}
+
+.minimalistcss #sgTitleNode {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.minimalistcss #TITLE {
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,233 @@
+
+
+/* Roboto & Mulish */
+
+.Roboto_Mulish .h1 {
+    font-family: Roboto;
+    font-size: 148px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.03;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h2 {
+    font-family: Roboto;
+    font-size: 120px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing:-0.01em;
+}
+
+.Roboto_Mulish .h3 {
+    font-family: Roboto;
+    font-size: 96px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h4 {
+    font-family: Roboto;
+    font-size: 72px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.24;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h5 {
+    font-family: Roboto;
+    font-size: 56px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h6 {
+    font-family: Roboto;
+    font-size: 44px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h7 {
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h8 {
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h9 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h10 {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .h11 {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .p1 {
+    font-family: Mulish;
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p2 {
+    font-family: Mulish;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p3 {
+    font-family: Mulish;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p4 {
+    font-family: Mulish;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p5 {
+    font-family: Mulish;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p6 {
+    font-family: Mulish;
+    font-size: 22px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p7 {
+    font-family: Mulish;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p8 {
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.64;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .p9 {
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.68;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .n1 {
+    font-family: Archivo;
+    font-size: 54px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0em;
+}
+
+.Roboto_Mulish .hl1 {
+    font-family: Roboto;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.19;
+    letter-spacing: -0.01em;
+}
+
+.Roboto_Mulish .hl2 {
+    font-family: Mulish;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.66;
+    letter-spacing: 0em;
+}
+
+

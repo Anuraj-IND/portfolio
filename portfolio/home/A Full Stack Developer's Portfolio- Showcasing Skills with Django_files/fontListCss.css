@@ -1,0 +1,332 @@
+/* //Default  font styles */
+.commonLayout .h1 {
+    font-family: Inter;
+    font-size: 148px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.03;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h2 {
+    font-family: Inter;
+    font-size: 120px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h3 {
+    font-family: Inter;
+    font-size: 96px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h4 {
+    font-family: Inter;
+    font-size: 72px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.24;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h5 {
+    font-family: Inter;
+    font-size: 56px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h6 {
+    font-family: Inter;
+    font-size: 44px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.34;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h7 {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h8 {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h9 {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h10 {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .h11 {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .p1 {
+    font-family: Inter;
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p2 {
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p3 {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p4 {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p5 {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p6 {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p7 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.64;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p8 {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.66;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .p9 {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.68;
+    letter-spacing: -0.01em;
+}
+
+.commonLayout .n1 {
+    font-family: Inter;
+    font-size: 54px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+}
+
+.commonLayout .hl1 {
+    font-family: Inter;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: -0.035em;
+}
+
+.commonLayout .hl2 {
+    font-family: Inter;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.66;
+    letter-spacing: -0.01em;
+}
+
+
+/* Custom Quote Fonts */
+
+.grandhotel {
+    font-family: "Grand Hotel";
+    font-size: 56px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: 0.22px;
+}
+
+.bebasneue {
+    font-family: "Bebas Neue";
+    font-size: 72px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.54px;
+}
+
+.sriracha {
+    font-family: Sriracha;
+    font-size: 44px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.15;
+    letter-spacing: -1.2px;
+}
+
+.niconne {
+    font-family: "Niconne", cursive;
+    font-size: 150px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: -1.68px;
+}
+.Delicious_Handrawn {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: -1.68px;
+}
+
+.Caveat_Brush {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 72px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+  
+}
+
+.worksans {
+    font-family: "Work Sans", sans-serif;
+    font-size: 180px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: -1px;
+}
+
+/* .raleway {
+    font-family: Raleway;
+    font-size: 200px;
+    font-weight: 900;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.85;
+    letter-spacing: -2px;
+} */
+
+/* Custom Number Fonts */
+
+.Digital-Dismay {
+    font-family: "Digital Dismay";
+    font-size: 240px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 24px;
+}
+.DkCrayonCrumble-ddll{
+    font-family: "DK Crayon Crumble";
+    font-size: 96px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: auto;
+}
+

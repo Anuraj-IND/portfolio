@@ -1,0 +1,2369 @@
+:root,
+.themeWhitebg[data-theme-palette="mono"],
+div[data-theme-palette="mono"] .themeWhitebg#TEXTBOX {
+    --theme-color-rgb: var(--mono-dark-high-rgb);
+    --accent1-color-rgb: var(--mono-dark-high-rgb);
+    --accent2-color-rgb: var(--mono-dark-high-rgb);
+    --accent3-color-rgb: var(--mono-dark-high-rgb);
+    --accent4-color-rgb: var(--mono-dark-high-rgb);
+    --accent5-color-rgb: var(--mono-dark-high-rgb);
+    --accent6-color-rgb: var(--mono-dark-high-rgb);
+    --accent7-color-rgb: var(--mono-dark-high-rgb);
+    --accent8-color-rgb: var(--mono-dark-high-rgb);
+    --accent9-color-rgb: var(--mono-dark-high-rgb);
+    --accent10-color-rgb: var(--mono-dark-high-rgb);
+    --accent11-color-rgb: var(--mono-dark-high-rgb);
+    --accent12-color-rgb: var(--mono-dark-high-rgb);
+
+    --contrast-color-rgb: var(--mono-contrast-rgb);
+    --dark-color-rgb: var(--mono-dark-high-rgb);
+    --white-color-rgb: var(--mono-light-high-rgb);
+    --darkgray-color-rgb: var(--mono-dark-medium-rgb);
+    --lightgray-color-rgb: var(--mono-light-medium-rgb);
+    --dark-low-rgb: var(--mono-dark-low-rgb);
+    --light-low-rgb: var(--mono-light-low-rgb);
+}
+:root,
+.themeBlackbg[data-theme-palette="mono"],
+div[data-theme-palette="mono"] .themeBlackbg#TEXTBOX {
+    --theme-color-rgb: var(--mono-light-high-rgb);
+    --accent1-color-rgb: var(--mono-light-high-rgb);
+    --accent2-color-rgb: var(--mono-light-high-rgb);
+    --accent3-color-rgb: var(--mono-light-high-rgb);
+    --accent4-color-rgb: var(--mono-light-high-rgb);
+    --accent5-color-rgb: var(--mono-light-high-rgb);
+    --accent6-color-rgb: var(--mono-light-high-rgb);
+    --accent7-color-rgb: var(--mono-light-high-rgb);
+    --accent8-color-rgb: var(--mono-light-high-rgb);
+    --accent9-color-rgb: var(--mono-light-high-rgb);
+    --accent10-color-rgb: var(--mono-light-high-rgb);
+    --accent11-color-rgb: var(--mono-light-high-rgb);
+    --accent12-color-rgb: var(--mono-light-high-rgb);
+
+    --contrast-color-rgb: var(--mono-contrast-rgb);
+    --dark-color-rgb: var(--mono-dark-high-rgb);
+    --white-color-rgb: var(--mono-light-high-rgb);
+    --darkgray-color-rgb: var(--mono-dark-medium-rgb);
+    --lightgray-color-rgb: var(--mono-light-medium-rgb);
+    --dark-low-rgb: var(--mono-dark-low-rgb);
+    --light-low-rgb: var(--mono-light-low-rgb);
+}
+:root,
+[data-theme-palette="single"] {
+    --theme-color-rgb: var(--single-theme1-rgb);
+    --accent1-color-rgb: var(--single-theme1-rgb);
+    --accent2-color-rgb: var(--single-theme1-rgb);
+    --accent3-color-rgb: var(--single-theme1-rgb);
+    --accent4-color-rgb: var(--single-theme1-rgb);
+    --accent5-color-rgb: var(--single-theme1-rgb);
+    --accent6-color-rgb: var(--single-theme1-rgb);
+    --accent7-color-rgb: var(--single-theme1-rgb);
+    --accent8-color-rgb: var(--single-theme1-rgb);
+    --accent9-color-rgb: var(--single-theme1-rgb);
+    --accent10-color-rgb: var(--single-theme1-rgb);
+    --accent11-color-rgb: var(--single-theme1-rgb);
+    --accent12-color-rgb: var(--single-theme1-rgb);
+
+    --contrast-color-rgb: var(--single-contrast-rgb);
+    --dark-color-rgb: var(--single-dark-high-rgb);
+    --white-color-rgb: var(--single-light-high-rgb);
+    --darkgray-color-rgb: var(--single-dark-medium-rgb);
+    --lightgray-color-rgb: var(--single-light-medium-rgb);
+    --dark-low-rgb: var(--single-dark-low-rgb);
+    --light-low-rgb: var(--single-light-low-rgb);
+}
+:root,
+[data-theme-palette="dual"] {
+    --theme-color-rgb: var(--dual-theme1-rgb);
+    --accent1-color-rgb: var(--dual-theme1-rgb);
+    --accent2-color-rgb: var(--dual-theme2-rgb);
+    --accent3-color-rgb: var(--dual-theme1-rgb);
+    --accent4-color-rgb: var(--dual-theme2-rgb);
+    --accent5-color-rgb: var(--dual-theme1-rgb);
+    --accent6-color-rgb: var(--dual-theme2-rgb);
+    --accent7-color-rgb: var(--dual-theme1-rgb);
+    --accent8-color-rgb: var(--dual-theme2-rgb);
+    --accent9-color-rgb: var(--dual-theme1-rgb);
+    --accent10-color-rgb: var(--dual-theme2-rgb);
+    --accent11-color-rgb: var(--dual-theme1-rgb);
+    --accent12-color-rgb: var(--dual-theme2-rgb);
+
+    --contrast-color-rgb: var(--dual-contrast-rgb);
+    --dark-color-rgb: var(--dual-dark-high-rgb);
+    --white-color-rgb: var(--dual-light-high-rgb);
+    --darkgray-color-rgb: var(--dual-dark-medium-rgb);
+    --lightgray-color-rgb: var(--dual-light-medium-rgb);
+    --dark-low-rgb: var(--dual-dark-low-rgb);
+    --light-low-rgb: var(--dual-light-low-rgb);
+}
+:root,
+[data-theme-palette="multiple"] {
+    --theme-color-rgb: var(--multi-theme1-rgb);
+    --accent1-color-rgb: var(--multi-theme1-rgb);
+    --accent2-color-rgb: var(--multi-theme2-rgb);
+    --accent3-color-rgb: var(--multi-theme3-rgb);
+    --accent4-color-rgb: var(--multi-theme4-rgb);
+    --accent5-color-rgb: var(--multi-theme5-rgb);
+    --accent6-color-rgb: var(--multi-theme6-rgb);
+    --accent7-color-rgb: var(--multi-theme7-rgb);
+    --accent8-color-rgb: var(--multi-theme8-rgb);
+    --accent9-color-rgb: var(--multi-theme9-rgb);
+    --accent10-color-rgb: var(--multi-theme10-rgb);
+    --accent11-color-rgb: var(--multi-theme11-rgb);
+    --accent12-color-rgb: var(--multi-theme12-rgb);
+
+    --contrast-color-rgb: var(--multi-contrast-rgb);
+    --dark-color-rgb: var(--multi-dark-high-rgb);
+    --white-color-rgb: var(--multi-light-high-rgb);
+    --darkgray-color-rgb: var(--multi-dark-medium-rgb);
+    --lightgray-color-rgb: var(--multi-light-medium-rgb);
+    --dark-low-rgb: var(--multi-dark-low-rgb);
+    --light-low-rgb: var(--multi-light-low-rgb);
+}
+:root,
+[data-theme-palette="gradient"] {
+    --theme-color-rgb: var(--gradient-theme1-rgb);
+    --accent1-color-rgb: var(--gradient-theme1-rgb);
+    --accent2-color-rgb: var(--gradient-theme1-rgb);
+    --accent3-color-rgb: var(--gradient-theme1-rgb);
+    --accent4-color-rgb: var(--gradient-theme1-rgb);
+    --accent5-color-rgb: var(--gradient-theme1-rgb);
+    --accent6-color-rgb: var(--gradient-theme1-rgb);
+    --accent7-color-rgb: var(--gradient-theme1-rgb);
+    --accent8-color-rgb: var(--gradient-theme1-rgb);
+    --accent9-color-rgb: var(--gradient-theme1-rgb);
+    --accent10-color-rgb: var(--gradient-theme1-rgb);
+    --accent11-color-rgb: var(--gradient-theme1-rgb);
+    --accent12-color-rgb: var(--gradient-theme1-rgb);
+
+    --contrast-color-rgb: var(--gradient-contrast-rgb);
+    --dark-color-rgb: var(--gradient-dark-high-rgb);
+    --white-color-rgb: var(--gradient-light-high-rgb);
+    --darkgray-color-rgb: var(--gradient-dark-medium-rgb);
+    --lightgray-color-rgb: var(--gradient-light-medium-rgb);
+    --dark-low-rgb: var(--gradient-dark-low-rgb);
+    --light-low-rgb: var(--gradient-light-low-rgb);
+}
+:root,
+[data-theme-palette="mono"],
+[data-theme-palette="single"],
+[data-theme-palette="dual"],
+[data-theme-palette="multiple"],
+[data-theme-palette="gradient"] {
+    --css-text-hover-color: #2188ff;
+    --css-text-bg-color: rgba(33, 136, 255, 0.1);
+    --color: 240, 240, 240;
+
+    --theme-color: rgb(var(--theme-color-rgb));
+    --accent1-color: rgb(var(--theme-color-rgb));
+    --accent2-color: rgb(var(--accent2-color-rgb));
+    --accent3-color: rgb(var(--accent3-color-rgb));
+    --accent4-color: rgb(var(--accent4-color-rgb));
+    --accent5-color: rgb(var(--accent5-color-rgb));
+    --accent6-color: rgb(var(--accent6-color-rgb));
+    --accent7-color: rgb(var(--accent7-color-rgb));
+    --accent8-color: rgb(var(--accent8-color-rgb));
+    --accent9-color: rgb(var(--accent9-color-rgb));
+    --accent10-color: rgb(var(--accent10-color-rgb));
+    --accent11-color: rgb(var(--accent11-color-rgb));
+    --accent12-color: rgb(var(--accent12-color-rgb));
+
+    --theme1-color-rgb: var(--accent1-color-rgb);
+    --theme2-color-rgb: var(--accent2-color-rgb);
+    --theme3-color-rgb: var(--accent3-color-rgb);
+    --theme4-color-rgb: var(--accent4-color-rgb);
+    --theme5-color-rgb: var(--accent5-color-rgb);
+    --theme6-color-rgb: var(--accent6-color-rgb);
+    --theme7-color-rgb: var(--accent7-color-rgb);
+    --theme8-color-rgb: var(--accent8-color-rgb);
+    --theme9-color-rgb: var(--accent9-color-rgb);
+    --theme10-color-rgb: var(--accent10-color-rgb);
+    --theme11-color-rgb: var(--accent11-color-rgb);
+    --theme12-color-rgb: var(--accent12-color-rgb);
+
+    --lightgreybg-color: var(--white-color);
+    --lightgreybg-color-rgb: var(--alter-light-rgb);
+    --darkgreybg-color: var(--dark-color);
+    --darkgreybg-color-rgb: var(--alter-dark-rgb);
+    --highlight1bg-color: var(--accent1-color);
+    --highlight2bg-color: var(--accent2-color);
+    --highlight3bg-color: var(--accent3-color);
+    --highlight4bg-color: var(--accent4-color);
+    --highlight5bg-color: var(--accent5-color);
+    --highlight6bg-color: var(--accent6-color);
+
+    --contrast-color-rgb: var(--contrast-color-rgb);
+    --dark-color: rgb(var(--dark-color-rgb));
+    --white-color: rgb(var(--white-color-rgb));
+    --darkgray-color: rgb(var(--darkgray-color-rgb));
+    --lightgray-color: rgb(var(--lightgray-color-rgb));
+
+    --alter-dark-color: rgb(var(--alter-dark-rgb));
+    --alter-light-color: rgb(var(--alter-light-rgb));
+}
+
+/* /gradient color based on mood type*/
+.themeWhitebg[data-theme-palette="mono"] {
+    --gradient1-color-rgb: var(--mono-dark-high-rgb);
+    --gradient2-color-rgb: var(--lightgray-color-rgb);
+}
+.themeBlackbg[data-theme-palette="mono"] {
+    --gradient1-color-rgb: var(--mono-light-high-rgb);
+    --gradient2-color-rgb: var(--darkgray-color-rgb);
+}
+[data-theme-palette="single"] {
+    --gradient1-color-rgb: var(--accent1-color-rgb);
+    --gradient2-color-rgb: var(--secondary-color-rgb);
+}
+[data-theme-palette="dual"] {
+    --gradient1-color-rgb: var(--accent1-color-rgb);
+    --gradient2-color-rgb: var(--accent2-color-rgb);
+}
+[data-theme-palette="multiple"] {
+    --gradient1-color-rgb: var(--accent1-color-rgb);
+    --gradient2-color-rgb: var(--accent6-color-rgb);
+}
+[data-theme-palette="gradient"] {
+    --gradient1-color-rgb: var(--gradient-theme1-rgb);
+    --gradient2-color-rgb: var(--gradient-theme2-rgb);
+}
+
+.themeWhitebg,
+.accent1HighlightWhitebg,
+.mltHighlightWhitebg,
+.mltItemHighlightWhitebg,
+.mnoHighlightWhitebg,
+.secHighlightWhitebg,
+.sngHighlightWhitebg,
+.tntBlackWhitebg,
+.trtHighlightWhitebg,
+.dualColorWhitebg {
+    --bg-color: rgb(var(--white-color-rgb));
+    --bg-color-rgb: var(--white-color-rgb);
+    --alter-bg-color: var(--lightgreybg-color);
+    --single-bg-color-rgb: var(--white-color-rgb);
+    --secondary-color-rgb: var(--dark-color-rgb);
+    --alter-secondary-color-rgb: var(--white-color-rgb);
+    --tertiary-color-rgb: var(--darkgray-color-rgb);
+    --alter-tertiary-color-rgb: var(--white-color-rgb);
+    --quaternary-color-rgb: var(--dark-low-rgb);
+    --alter-quaternary-color-rgb: var(--light-low-rgb);
+
+    --alter-bg: var(--alter-light-color);
+    --alter-bg-color-rgb: var(--alter-light-rgb);
+
+    --contrast-color-rgb: var(--contrast-color-rgb);
+
+    --nagative-rgb: 255, 0, 0;
+    --positive-rgb: 0, 127, 0;
+
+    --icon-color: var(--theme-color);
+    --icon-color-rgb: var(--theme-color-rgb);
+    --item-icon-color-rgb: var(--dark-color-rgb);
+    --alter-theme-color-rgb: var(--theme-color-rgb);
+
+    --single-bg-color: rgb(var(--white-color-rgb));
+    --secondary-color: var(--dark-color);
+    --alter-secondary-color: rgb(var(--white-color-rgb));
+    --tertiary-color: var(--darkgray-color);
+    --alter-tertiary-color: rgb(var(--white-color-rgb));
+    --unique-color: rgb(var(--white-color-rgb));
+    --inner-color: rgb(var(--white-color-rgb));
+}
+.themeBlackbg,
+.accent1HighlightBlackbg,
+.mltHighlightBlackbg,
+.mltItemHighlightBlackbg,
+.mnoHighlightBlackbg,
+.secHighlightBlackbg,
+.shdWhiteBlackbg,
+.sngHighlightBlackbg,
+.trtHighlightBlackbg,
+.dualColorBlackbg {
+    --bg-color: var(--dark-color);
+    --bg-color-rgb: var(--dark-color-rgb);
+    --alter-bg-color: var(--darkgreybg-color);
+    --single-bg-color-rgb: var(--dark-color-rgb);
+    --secondary-color-rgb: var(--white-color-rgb);
+    --alter-secondary-color-rgb: var(--dark-color-rgb);
+    --tertiary-color-rgb: var(--lightgray-color-rgb);
+    --alter-tertiary-color-rgb: var(--dark-color-rgb);
+    --quaternary-color-rgb: var(--light-low-rgb);
+    --alter-quaternary-color-rgb: var(--dark-low-rgb);
+
+    --alter-bg: var(--alter-dark-color);
+    --alter-bg-color-rgb: var(--alter-dark-rgb);
+
+    --contrast-color-rgb: var(--contrast-color-rgb);
+
+    --nagative-rgb: 255, 0, 0;
+    --positive-rgb: 0, 127, 0;
+
+    --icon-color: var(--theme-color);
+    --icon-color-rgb: var(--theme-color-rgb);
+    --item-icon-color-rgb: var(--white-color-rgb);
+    --alter-theme-color-rgb: var(--theme-color-rgb);
+
+    --single-bg-color: var(--dark-color);
+    --secondary-color: rgb(var(--white-color-rgb));
+    --alter-secondary-color: var(--dark-color);
+    --tertiary-color: var(--lightgray-color);
+    --alter-tertiary-color: var(--dark-color);
+    --inner-color: var(--dark-color);
+    --unique-color: var(--dark-color);
+}
+.mnoHighlightWhitebg,
+.mnoHighlightBlackbg {
+    --title-highlight-color: var(--accent2-color);
+    --subtitle-highlight-color: var(--accent2-color);
+    --label-color: var(--accent2-color);
+}
+.trtHighlightWhitebg,
+.trtHighlightBlackbg {
+    --title-highlight-color: var(--accent3-color);
+    --subtitle-highlight-color: var(--accent3-color);
+    --label-color: var(--accent3-color);
+}
+.mltHighlightWhitebg,
+.mltHighlightBlackbg {
+    --title-highlight-color: var(--accent4-color);
+    --subtitle-highlight-color: var(--accent4-color);
+    --label-color: var(--accent4-color);
+}
+.tntBlackWhitebg,
+.shdWhiteBlackbg {
+    --title-highlight-color: var(--accent5-color);
+    --subtitle-highlight-color: var(--accent5-color);
+    --label-color: var(--accent5-color);
+}
+.mltItemHighlightWhitebg,
+.mltItemHighlightBlackbg {
+    --title-highlight-color: var(--accent6-color);
+    --subtitle-highlight-color: var(--accent6-color);
+    --label-color: var(--accent6-color);
+}
+.whitethemebg,
+.blackthemebg,
+.shdWhiteHighlightbg,
+.sngWhiteHighlightbg {
+    --theme-color: var(--accent1-color) !important;
+    --theme-color-rgb: var(--accent1-color-rgb) !important;
+    --highlightbg-color: var(--highlight1bg-color);
+}
+.whiteaccent2bg,
+.blackaccent2bg,
+.sngBlackHighlightbg,
+.tntBlackHighlightbg {
+    --theme-color: var(--accent2-color) !important;
+    --theme-color-rgb: var(--accent2-color-rgb) !important;
+    --highlightbg-color: var(--highlight2bg-color);
+}
+.whiteaccent3bg,
+.blackaccent3bg,
+.blackHighlight1bg,
+.whiteHighlight1bg {
+    --theme-color: var(--accent3-color) !important;
+    --theme-color-rgb: var(--accent3-color-rgb) !important;
+    --highlightbg-color: var(--highlight3bg-color);
+}
+.whiteaccent4bg,
+.blackaccent4bg,
+.blackHighlight2bg,
+.whiteHighlight2bg {
+    --theme-color: var(--accent4-color) !important;
+    --theme-color-rgb: var(--accent4-color-rgb) !important;
+    --highlightbg-color: var(--highlight4bg-color);
+}
+.whiteaccent5bg,
+.blackaccent5bg,
+.blackHighlight3bg,
+.whiteHighlight3bg {
+    --theme-color: var(--accent5-color) !important;
+    --theme-color-rgb: var(--accent5-color-rgb) !important;
+    --highlightbg-color: var(--highlight5bg-color);
+}
+.whiteaccent6bg,
+.blackaccent6bg,
+.blackHighlight4bg,
+.whiteHighlight4bg {
+    --theme-color: var(--accent6-color) !important;
+    --theme-color-rgb: var(--accent6-color-rgb) !important;
+    --highlightbg-color: var(--highlight6bg-color);
+}
+.gradient1bg,
+.gradient2bg,
+.gradient1Whitebg,
+.gradient2Whitebg,
+.whitethemebg,
+.whiteaccent2bg,
+.whiteaccent3bg,
+.whiteaccent4bg,
+.whiteaccent5bg,
+.whiteaccent6bg,
+.whiteHighlight1bg,
+.whiteHighlight2bg,
+.whiteHighlight3bg,
+.whiteHighlight4bg,
+.blackHighlight1bg,
+.blackHighlight2bg,
+.blackHighlight3bg,
+.blackHighlight4bg,
+.shdWhiteHighlightbg,
+.tntBlackHighlightbg,
+.sngBlackHighlightbg,
+.sngWhiteHighlightbg {
+    --bg-color: var(--theme-color);
+    --bg-color-rgb: var(--theme-color-rgb);
+    --alter-bg-color: var(--highlightbg-color);
+    --single-bg-color-rgb: var(--theme-color-rgb);
+
+    --secondary-color-rgb: var(--white-color-rgb);
+    --alter-secondary-color-rgb: var(--dark-color-rgb);
+    --tertiary-color-rgb: var(--light2tint-color-rgb);
+    --alter-tertiary-color-rgb: var(--dark2tint-color-rgb);
+    --quaternary-color-rgb: var(--light3tint-color-rgb);
+    --alter-quaternary-color-rgb: var(--darktint3-color-rgb);
+    --contrast-color-rgb: var(--dark-color-rgb);
+
+    --nagative-rgb: var(--white-color-rgb);
+    --positive-rgb: var(--white-color-rgb);
+
+    --alter-bg: rgba(var(--secondary-color-rgb), 0.15);
+    --alter-bg-color-rgb: var(--secondary-color-rgb), 0.1;
+
+    --icon-color: rgb(var(--white-color-rgb));
+    --icon-color-rgb: var(--white-color-rgb);
+    --item-icon-color-rgb: var(--white-color-rgb);
+    --alter-theme-color-rgb: var(--dark-color-rgb);
+    --gradient1-color-rgb: var(--white-color-rgb);
+    --gradient2-color-rgb: 158, 158, 158;
+
+    --item1-color-rgb: var(--white-color-rgb);
+    --item2-color-rgb: var(--white-color-rgb);
+    --item3-color-rgb: var(--white-color-rgb);
+    --item4-color-rgb: var(--white-color-rgb);
+    --item5-color-rgb: var(--white-color-rgb);
+    --item6-color-rgb: var(--white-color-rgb);
+    --item7-color-rgb: var(--white-color-rgb);
+    --item8-color-rgb: var(--white-color-rgb);
+    --item9-color-rgb: var(--white-color-rgb);
+    --item10-color-rgb: var(--white-color-rgb);
+    --item11-color-rgb: var(--white-color-rgb);
+    --item12-color-rgb: var(--white-color-rgb);
+
+    --item1-color: rgb(var(--white-color-rgb));
+    --item2-color: rgb(var(--white-color-rgb));
+    --item3-color: rgb(var(--white-color-rgb));
+    --item4-color: rgb(var(--white-color-rgb));
+    --item5-color: rgb(var(--white-color-rgb));
+    --item6-color: rgb(var(--white-color-rgb));
+    --item7-color: rgb(var(--white-color-rgb));
+    --item8-color: rgb(var(--white-color-rgb));
+    --item9-color: rgb(var(--white-color-rgb));
+    --item10-color: rgb(var(--white-color-rgb));
+    --item11-color: rgb(var(--white-color-rgb));
+    --item12-color: rgb(var(--white-color-rgb));
+    --single-bg-color: var(--theme-color);
+    --inner-color: rgb(var(--white-color-rgb));
+    --unique-color: rgb(var(--white-color-rgb));
+    --secondary-color: rgb(var(--white-color-rgb));
+    --alter-secondary-color: var(--dark-color);
+    --tertiary-color: rgb(var(--white-color-rgb));
+    --alter-tertiary-color: var(--dark-color);
+}
+.gradient1Blackbg,
+.gradient2Blackbg,
+.blackaccent2bg,
+.blackaccent3bg,
+.blackaccent4bg,
+.blackaccent5bg,
+.blackaccent6bg,
+.blackthemebg {
+    --bg-color: var(--theme-color);
+    --bg-color-rgb: var(--theme-color-rgb);
+    --alter-bg-color: var(--highlightbg-color);
+    --single-bg-color-rgb: var(--theme-color-rgb);
+
+    --secondary-color-rgb: var(--dark-color-rgb);
+    --alter-secondary-color-rgb: var(--white-color-rgb);
+    --tertiary-color-rgb: var(--dark2tint-color-rgb);
+    --alter-tertiary-color-rgb: var(--light2tint-color-rgb);
+    --quaternary-color-rgb: var(--dark3tint-color-rgb);
+    --alter-quaternary-color-rgb: var(--lighttint3-color-rgb);
+    --contrast-color-rgb: var(--white-color-rgb);
+
+    --icon-color: rgb(var(--dark-color-rgb));
+    --icon-color-rgb: var(--dark-color-rgb);
+    --item-icon-color-rgb: var(--dark-color-rgb);
+    --alter-theme-color-rgb: var(--white-color-rgb);
+    --gradient1-color-rgb: var(--dark-color-rgb);
+    --gradient2-color-rgb: 178, 178, 178;
+
+    --nagative-rgb: var(--dark-color-rgb);
+    --positive-rgb: var(--dark-color-rgb);
+
+    --alter-bg: rgba(var(--secondary-color-rgb), 0.1);
+    --alter-bg-color-rgb: var(--secondary-color-rgb), 0.1;
+
+    --item1-color-rgb: var(--dark-color-rgb);
+    --item2-color-rgb: var(--dark-color-rgb);
+    --item3-color-rgb: var(--dark-color-rgb);
+    --item4-color-rgb: var(--dark-color-rgb);
+    --item5-color-rgb: var(--dark-color-rgb);
+    --item6-color-rgb: var(--dark-color-rgb);
+    --item7-color-rgb: var(--dark-color-rgb);
+    --item8-color-rgb: var(--dark-color-rgb);
+    --item9-color-rgb: var(--dark-color-rgb);
+    --item10-color-rgb: var(--dark-color-rgb);
+    --item11-color-rgb: var(--dark-color-rgb);
+    --item12-color-rgb: var(--dark-color-rgb);
+
+    --item1-color: var(--dark-color);
+    --item2-color: var(--dark-color);
+    --item3-color: var(--dark-color);
+    --item4-color: var(--dark-color);
+    --item5-color: var(--dark-color);
+    --item6-color: var(--dark-color);
+    --item7-color: var(--dark-color);
+    --item8-color: var(--dark-color);
+    --item9-color: var(--dark-color);
+    --item10-color: var(--dark-color);
+    --item11-color: var(--dark-color);
+    --item12-color: var(--dark-color);
+
+    --single-bg-color: var(--theme-color);
+    --secondary-color: var(--dark-color);
+    --alter-secondary-color: rgb(var(--white-color-rgb));
+    --tertiary-color: var(--dark-color);
+    --alter-tertiary-color: rgb(var(--white-color-rgb));
+    --unique-color: var(--dark-color);
+}
+
+.gradient1bg,
+.gradient1Whitebg,
+.gradient1Blackbg {
+    --bg-color: linear-gradient(150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1));
+    --bg-color-rgb: var(--gradient-theme1-rgb);
+    --alter-bg-color: linear-gradient(150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1));
+    --alter-bg-color-rgb: var(--gradient-theme1-rgb);
+}
+.gradient2bg,
+.gradient2Whitebg,
+.gradient2Blackbg {
+    --bg-color: linear-gradient(-150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1));
+    --bg-color-rgb: var(--gradient-theme1-rgb);
+    --alter-bg-color: linear-gradient(-150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1));
+    --alter-bg-color-rgb: var(--gradient-theme1-rgb);
+}
+
+/* //common styles */
+.themeWhitebg,
+.accent1HighlightWhitebg,
+.mltHighlightWhitebg,
+.mltItemHighlightWhitebg,
+.mnoHighlightWhitebg,
+.secHighlightWhitebg,
+.sngHighlightWhitebg,
+.tntBlackWhitebg,
+.trtHighlightWhitebg,
+.dualColorWhitebg {
+    --title-color: rgb(var(--dark-color-rgb));
+    --title-highlight-color: var(--theme-color);
+    --title-highlight-color-rgb: var(--theme-color-rgb);
+    --subtitle-color: var(--tertiary-color);
+    --subtitle-highlight-color: var(--theme-color);
+    --label-color: var(--theme-color);
+    --label-highlight-color: rgb(var(--dark-color-rgb));
+
+    --table-highlight-bg: var(--theme-color);
+    --table-highlight-font-bg: rgb(var(--white-color-rgb));
+    --table-highlight-inner-bg: rgb(var(--dark-color-rgb));
+    --table-normal-bg: var(--single-bg-color);
+    --table-normal-font-bg: var(--theme-color);
+    --table-normal-inner-bg: rgb(var(--white-color-rgb));
+}
+.themeBlackbg,
+.accent1HighlightBlackbg,
+.mltHighlightBlackbg,
+.mltItemHighlightBlackbg,
+.mnoHighlightBlackbg,
+.secHighlightBlackbg,
+.shdWhiteBlackbg,
+.sngHighlightBlackbg,
+.trtHighlightBlackbg,
+.dualColorBlackbg {
+    --title-color: rgb(var(--white-color-rgb));
+    --title-highlight-color: var(--theme-color);
+    --title-highlight-color-rgb: var(--theme-color-rgb);
+    --subtitle-color: rgb(var(--white-color-rgb));
+    --subtitle-highlight-color: var(--theme-color);
+    --label-color: var(--theme-color);
+    --label-highlight-color: rgb(var(--white-color-rgb));
+
+    --table-highlight-bg: var(--theme-color);
+    --table-highlight-font-bg: var(--dark-color);
+    --table-highlight-inner-bg: rgb(var(--white-color-rgb));
+    --table-normal-bg: var(--single-bg-color);
+    --table-normal-font-bg: var(--theme-color);
+    --table-normal-inner-bg: var(--dark-color);
+}
+.gradient1bg,
+.gradient2bg,
+.gradient1Whitebg,
+.gradient2Whitebg,
+.whitethemebg,
+.whiteaccent2bg,
+.whiteaccent3bg,
+.whiteaccent4bg,
+.whiteaccent5bg,
+.whiteaccent6bg {
+    --title-color: rgb(var(--white-color-rgb));
+    --title-highlight-color: rgb(var(--dark-color-rgb));
+    --title-highlight-color-rgb: var(--dark-color-rgb);
+    --subtitle-color: rgb(var(--light2tint-color-rgb));
+    --subtitle-highlight-color: rgb(var(--dark-color-rgb));
+    --label-color: rgb(var(--light2tint-color-rgb));
+    --label-highlight-color: rgb(var(--dark-color-rgb));
+
+    --table-highlight-bg: rgb(var(--white-color-rgb));
+    --table-highlight-font-bg: rgb(var(--dark-color-rgb));
+    --table-normal-font-bg: rgb(var(--white-color-rgb));
+    --table-normal-inner-bg: rgb(var(--dark-color-rgb));
+    --table-highlight-inner-bg: var(--theme-color);
+    --table-normal-bg: var(--single-bg-color);
+}
+.gradient1Blackbg,
+.gradient2Blackbg,
+.blackaccent2bg,
+.blackaccent3bg,
+.blackaccent4bg,
+.blackaccent5bg,
+.blackaccent6bg,
+.blackthemebg {
+    --title-color: rgb(var(--dark-color-rgb));
+    --title-highlight-color: rgb(var(--white-color-rgb));
+    --title-highlight-color-rgb: var(--white-color-rgb);
+    --subtitle-color: rgb(var(--dark2tint-color-rgb));
+    --subtitle-highlight-color: rgb(var(--white-color-rgb));
+    --label-color: rgb(var(--dark-color-rgb));
+    --label-highlight-color: rgb(var(--white-color-rgb));
+
+    --table-highlight-bg: rgb(var(--dark-color-rgb));
+    --table-highlight-font-bg: rgb(var(--white-color-rgb));
+    --table-normal-font-bg: rgb(var(--dark-color-rgb));
+    --table-normal-inner-bg: rgb(var(--white-color-rgb));
+    --table-highlight-inner-bg: var(--theme-color);
+    --table-normal-bg: var(--single-bg-color);
+}
+
+.commonLayout {
+    background: var(--alter-bg-color) !important;
+    fill: var(--alter-bg-color) !important;
+}
+
+/* //light fixed colors */
+.commonLayout.fixedlightText #textElement,
+#textElement[data-bg-color="transparentBg"],
+#textElement[data-bg-color="transparentBg"] .childtextelement .childelement {
+    background-color: var(--alter-secondary-color) !important;
+}
+.commonLayout.fixedlightText #TEXTBOX_HOLDER .textBoxEditor.transparentBg {
+    color: var(--alter-secondary-color);
+}
+.commonLayout.fixedlightText .TITLE.transparentBg,
+.commonLayout.fixedlightText .textBg.transparentBg {
+    background-color: transparent !important;
+    color: var(--alter-secondary-color);
+    border-color: var(--alter-secondary-color) !important;
+}
+.commonLayout.fixedlightText .SUBTITLE.transparentBg,
+.commonLayout.fixedlightText #TEXTBOX_HOLDER .textBoxEditor.transparentBg,
+.commonLayout.fixedlightText #slideplaceholdertext.transparentBg,
+.commonLayout.fixedlightText .SLIDE_LABEL.transparentBg {
+    background-color: transparent !important;
+    color: var(--alter-secondary-color);
+}
+.commonLayout.fixedlightText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--alter-secondary-color) !important;
+}
+
+/* //dark fixed colors */
+.commonLayout.fixeddarkText #textElement,
+.commonLayout.fixeddarkText #textElement .childtextelement .childelement {
+    background-color: var(--secondary-color) !important;
+}
+.commonLayout.fixeddarkText #TEXTBOX_HOLDER .textBoxEditor.transparentBg {
+    color: var(--secondary-color) !important;
+}
+.commonLayout.fixeddarkText .TITLE.transparentBg,
+.commonLayout.fixeddarkText .textBg.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color);
+    border-color: var(--secondary-color) !important;
+}
+.commonLayout.fixeddarkText .SUBTITLE.transparentBg,
+.commonLayout.fixedlightText #TEXTBOX_HOLDER .textBoxEditor.transparentBg,
+.commonLayout.fixeddarkText #slideplaceholdertext.transparentBg,
+.commonLayout.fixeddarkText .SLIDE_LABEL.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color);
+}
+.commonLayout.fixeddarkText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--secondary-color) !important;
+}
+
+/* //light fixed colors */
+.commonLayout.bglightText #textElement,
+#textElement[data-bg-color="transparentBg"],
+#textElement[data-bg-color="transparentBg"] .childtextelement .childelement {
+    background-color: var(--secondary-color) !important;
+}
+.commonLayout.bglightText #TEXTBOX_HOLDER .textBoxEditor.transparentBg {
+    color: var(--secondary-color);
+}
+.commonLayout.bglightText .TITLE.transparentBg,
+.commonLayout.bglightText .textBg.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.commonLayout.bglightText .clsPrimaryText,
+.commonLayout.bglightText .clsSubTitleText {
+    color: var(--secondary-color);
+}
+.commonLayout.bglightText .SUBTITLE.transparentBg,
+.commonLayout.bglightText #TEXTBOX_HOLDER .textBoxEditor.transparentBg,
+.commonLayout.bglightText #slideplaceholdertext.transparentBg,
+.commonLayout.bglightText .SLIDE_LABEL.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color);
+}
+.commonLayout.bglightText .SUBTITLE.transparentBg,
+.commonLayout.bglightText .SLIDE_LABEL.transparentBg {
+    color: var(--secondary-color) !important;
+}
+.commonLayout.bglightText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--secondary-color) !important;
+}
+
+/* //dark fixed colors */
+.commonLayout.bgdarkText #textElement,
+.commonLayout.bgdarkText #textElement .childtextelement .childelement {
+    background-color: var(--secondary-color) !important;
+}
+.commonLayout.bgdarkText #TEXTBOX_HOLDER .textBoxEditor.transparentBg {
+    color: var(--secondary-color);
+}
+.commonLayout.bgdarkText .TITLE.transparentBg,
+.commonLayout.bgdarkText .textBg.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.commonLayout.bgdarkText .clsPrimaryText,
+.commonLayout.bgdarkText .clsSubTitleText,
+.commonLayout.bgdarkText .clsValueText {
+    color: var(--secondary-color);
+}
+.commonLayout.bgdarkText .SUBTITLE.transparentBg,
+.commonLayout.bgdarkText #TEXTBOX_HOLDER .textBoxEditor.transparentBg,
+.commonLayout.bgdarkText #slideplaceholdertext.transparentBg,
+.commonLayout.bgdarkText .SLIDE_LABEL.transparentBg {
+    background-color: transparent !important;
+    color: var(--secondary-color);
+}
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--secondary-color) !important;
+}
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .icondual1 {
+    fill: rgba(var(--secondary-color-rgb), var(--icondual1-opacity)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .icondual2 {
+    fill: rgba(var(--secondary-color-rgb), var(--icondual2-opacity)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .icondual3 {
+    fill: rgba(var(--secondary-color-rgb), var(--icondual3-opacity)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .iconsec {
+    fill: rgba(var(--secondary-color-rgb), 1) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .icon1 {
+    fill: rgba(var(--secondary-color-rgb)) !important;
+    stroke: rgba(var(--secondary-color-rgb)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .iconfill1 {
+    fill: rgba(var(--secondary-color-rgb)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .iconstroke1 {
+    stroke: rgba(var(--secondary-color-rgb)) !important;
+}
+
+.commonLayout.bgdarkText #slideplaceholder svg[data-type="ICON"] .icon2 {
+    opacity: var(--icon-opacity);
+}
+
+/* //image based light text */
+.commonLayout.lightText .TITLE.transparentBg:not([data-removecontrast="true"]),
+.commonLayout.lightText .textBg.transparentBg,
+.commonLayout.lightText .enblecontrast .clsValueText,
+.commonLayout.lightText .enblecontrast .clsMicroChartNode,
+.commonLayout.lightText .bgnode.transparentBg,
+.commonLayout.lightText .SUBTITLE.transparentBg:not([data-removecontrast="true"]),
+.commonLayout.lightText #slideplaceholdertext.transparentBg,
+.commonLayout.lightText .SLIDE_LABEL.transparentBg:not([data-removecontrast="true"]),
+.commonLayout.lightText #TEXTBOX_EDITOR.transparentBg {
+    background-color: transparent !important;
+    color: var(--white-color) !important;
+}
+.commonLayout.lightText #textElement[data-bg-color="transparentBg"] {
+    background-color: var(--white-color) !important;
+    fill: var(--white-color) !important;
+    stroke: var(--white-color) !important;
+}
+.commonLayout.lightText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--white-color) !important;
+    fill: var(--white-color) !important;
+}
+.commonLayout.lightText #slideplaceholder svg[data-type="ICON"] .iconfill1 {
+    --icon-color: var(--white-color) !important;
+    fill: var(--white-color) !important;
+}
+/* //image based dark text */
+.commonLayout.darkText .TITLE.transparentBg,
+.commonLayout.darkText .textBg.transparentBg,
+.commonLayout.darkText .bgnode.transparentBg,
+.commonLayout.darkText .enblecontrast .clsValueText,
+.commonLayout.darkText .enblecontrast .clsMicroChartNode,
+.commonLayout.darkText .SUBTITLE.transparentBg,
+.commonLayout.darkText #TEXTBOX_HOLDER .textBoxEditor.transparentBg,
+.commonLayout.darkText #slideplaceholdertext.transparentBg,
+.commonLayout.darkText .SLIDE_LABEL.transparentBg {
+    background-color: transparent !important;
+    color: var(--dark-color) !important;
+}
+.commonLayout.darkText #slideplaceholder svg[data-type="ICON"] {
+    --icon-color: var(--dark-color) !important;
+}
+
+/* text elements */
+#textElement,
+#textElement[data-bg-color="transparentBg"],
+#textElement[data-bg-color="subtitleColorBg"],
+#textElement[data-bg-color="backgroundColorBg"],
+#textElement[data-bg-color="subtitleColorBg"] .childtextelement .childelement,
+#textElement[data-bg-color="backgroundColorBg"] .childtextelement .childelement,
+#textElement[data-bg-color="transparentBg"] .childtextelement .childelement,
+#textElementSG,
+#textElementSG[data-bg-color="transparentBg"],
+#textElementSG[data-bg-color="subtitleColorBg"],
+#textElementSG[data-bg-color="backgroundColorBg"],
+#textElementSG[data-bg-color="transparentBg"] .childtextelement .childelement,
+#textElementSG[data-bg-color="subtitleColorBg"] .childtextelement .childelement,
+#textElementSG[data-bg-color="backgroundColorBg"] .childtextelement .childelement {
+    background-color: var(--label-color) !important;
+    fill: var(--label-color) !important;
+    stroke: var(--label-color) !important;
+}
+
+#textElement[data-bg-color="titleColorBg"],
+#textElement[data-bg-color="titleColorBg"] .childtextelement .childelement {
+    background-color: var(--title-color) !important;
+    fill: var(--title-color) !important;
+    stroke: var(--title-color) !important;
+}
+
+#textElement[data-bg-color="subtitleColorBg"],
+#textElement[data-bg-color="subtitleColorBg"] .childtextelement .childelement {
+    background-color: var(--alter-secondary-color) !important;
+    fill: var(--alter-secondary-color) !important;
+    stroke: var(--alter-secondary-color) !important;
+}
+
+.commonLayout.lightText #textElement[data-bg-color="transparentBg"],
+.commonLayout.lightText #textElement,
+.commonLayout .lightText #textElement {
+    background-color: var(--white-color) !important;
+    fill: var(--white-color) !important;
+    stroke: var(--white-color) !important;
+}
+
+/* text background floter */
+.floaterTextBackground1 {
+    background-color: var(--title-color) !important;
+}
+.floaterTextBackground2 {
+    background-color: var(--alter-bg-color) !important;
+}
+.floaterTextBackground3 {
+    background-color: var(--title-highlight-color) !important;
+}
+.floaterTextBackground4 {
+    background-color: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.propSlideThemeColorsListItemColorDiv {
+    background-color: var(--alter-bg-color) !important;
+}
+.propSlideThemeColorsListItemLabel {
+    color: var(--title-color) !important;
+}
+
+.moodLottieBackgroundClass {
+    background-color: var(--alter-bg-color) !important;
+    fill: var(--alter-bg-color) !important;
+    stroke: var(--alter-bg-color) !important;
+}
+
+/* //gradient and double color bg */
+.gradient1bg,
+.gradient1Whitebg,
+.gradient1Blackbg,
+.gradient1Whitebg .propSlideThemeColorsListItemColorDiv,
+.gradient1bg .propSlideThemeColorsListItemColorDiv,
+.gradient1Blackbg .propSlideThemeColorsListItemColorDiv {
+    background-image: linear-gradient(150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1)) !important;
+    background-color: unset !important;
+}
+.gradient2bg,
+.gradient2Whitebg,
+.gradient2Blackbg,
+.gradient2bg .propSlideThemeColorsListItemColorDiv,
+.gradient2Whitebg .propSlideThemeColorsListItemColorDiv,
+.gradient2Blackbg .propSlideThemeColorsListItemColorDiv {
+    background-image: linear-gradient(-150deg, rgba(var(--gradient-theme1-rgb), 1), rgba(var(--gradient-theme2-rgb), 1)) !important;
+    background-color: unset !important;
+}
+.gradient1bg .BG,
+.gradient2bg .BG,
+.gradient1Whitebg .BG,
+.gradient1Blackbg .BG,
+.gradient2Whitebg .BG,
+.gradient2Blackbg .BG {
+    background-color: transparent !important;
+}
+.commonLayout #TEXTBOX .darkBg,
+.commonLayout #BG .overlayDiv.darkBg,
+.commonLayout #GRAPHIC .clsElementBG.darkBg {
+    background-color: var(--secondary-color) !important;
+}
+.commonLayout #TEXTBOX .themeBg,
+.commonLayout #BG .overlayDiv.themeBg,
+.commonLayout #GRAPHIC .clsElementBG.themeBg {
+    background-color: var(--item1-color) !important;
+}
+.commonLayout #TEXTBOX .whiteBg,
+.commonLayout #BG .overlayDiv.whiteBg,
+.commonLayout #GRAPHIC .clsElementBG.whiteBg {
+    background-color: var(--alter-secondary-color) !important;
+}
+
+.commonLayout #TEXTBOX .alterBg,
+.commonLayout #BG .overlayDiv.alterBg,
+.commonLayout #GRAPHIC .clsElementBG.alterBg {
+    background-color: var(--alter-bg) !important;
+}
+
+.commonLayout #TEXTBOX .slideBg,
+.commonLayout #BG .overlayDiv.slideBg,
+.commonLayout #GRAPHIC .clsElementBG.slideBg {
+    background-color: var(--bg-color) !important;
+    background: var(--bg-color) !important;
+}
+
+.takeawayBg.subtitleColorBg {
+    background-color: var(--title-color) !important;
+}
+.takeawayBg.titleColorBg {
+    background-color: var(--label-color) !important;
+}
+.takeawayBg.transparentBg {
+    background-color: transparent !important;
+}
+
+.TEXTBOX .REMOVE_TEXTBOX_HIGHLIGHT {
+    color: var(--title-color) !important;
+}
+
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .clsPrimaryTextColor,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .secondary-color {
+    color: var(--alter-secondary-color) !important;
+}
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .secondary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .secondary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .secondary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .clsPrimaryTextColor,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .clsPrimaryTextColor,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .clsPrimaryTextColor {
+    color: var(--alter-secondary-color) !important;
+}
+
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .secondary-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .clsNodeSecondarybg,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .secondary-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .clsNodeSecondarybg,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .secondary-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .clsNodeSecondarybg {
+    background-color: var(--alter-secondary-color) !important;
+}
+
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .alter-secondary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .alter-secondary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .alter-secondary-color {
+    background-color: var(--secondary-color) !important;
+}
+
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent2-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent2-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent2-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent1-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent1-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent1-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent3-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent3-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent3-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent4-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent4-bg-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent4-bg-color {
+    background-color: var(--alter-secondary-color) !important;
+}
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent2-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent2-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent2-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent1-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent1-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent1-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent3-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent3-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent3-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent4-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent4-fill,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent4-fill {
+    fill: var(--alter-secondary-color) !important;
+}
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent2-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent2-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent2-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent1-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent1-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent1-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent3-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent3-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent3-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="backgroundColorText"] .accent4-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .accent4-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .accent4-color {
+    color: var(--alter-secondary-color) !important;
+}
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .tertiary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .tertiary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .tertiary-color,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="subtitleColorText"] .clsSecondaryTextColor,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="contrastColorText"] .clsSecondaryTextColor,
+#TEXTBOX #TEXTBOX_HOLDER[data-bg-color="titleColorText"] .clsSecondaryTextColor {
+    color: var(--alter-tertiary-color) !important;
+}
+
+.themeWhitebg.propSlideThemeColorsListItemColorDiv,
+.themeBlackbg.propSlideThemeColorsListItemColorDiv {
+    background: var(--bg-color);
+}
+
+.themeWhitebg,
+.themeBlackbg,
+.secHighlightBlackbg,
+.secHighlightWhitebg,
+.sngHighlightBlackbg,
+.sngHighlightWhitebg {
+    --item1-color: var(--theme-color);
+    --item2-color: var(--accent2-color);
+    --item3-color: var(--accent3-color);
+    --item4-color: var(--accent4-color);
+    --item5-color: var(--accent5-color);
+    --item6-color: var(--accent6-color);
+    --item7-color: var(--accent7-color);
+    --item8-color: var(--accent8-color);
+    --item9-color: var(--accent9-color);
+    --item10-color: var(--accent10-color);
+    --item11-color: var(--accent11-color);
+    --item12-color: var(--accent12-color);
+    --item1-color-rgb: var(--theme-color-rgb);
+    --item2-color-rgb: var(--accent2-color-rgb);
+    --item3-color-rgb: var(--accent3-color-rgb);
+    --item4-color-rgb: var(--accent4-color-rgb);
+    --item5-color-rgb: var(--accent5-color-rgb);
+    --item6-color-rgb: var(--accent6-color-rgb);
+    --item7-color-rgb: var(--accent7-color-rgb);
+    --item8-color-rgb: var(--accent8-color-rgb);
+    --item9-color-rgb: var(--accent9-color-rgb);
+    --item10-color-rgb: var(--accent10-color-rgb);
+    --item11-color-rgb: var(--accent11-color-rgb);
+    --item12-color-rgb: var(--accent12-color-rgb);
+}
+.accent1HighlightWhitebg,
+.accent1HighlightBlackbg,
+.themeWhitebg[data-theme-palette="single"],
+.themeBlackbg[data-theme-palette="single"],
+.secHighlightBlackbg[data-theme-palette="single"],
+.sngHighlightWhitebg[data-theme-palette="single"] {
+    --item1-color: var(--theme-color);
+    --item2-color: var(--theme-color);
+    --item3-color: var(--theme-color);
+    --item4-color: var(--theme-color);
+    --item5-color: var(--theme-color);
+    --item6-color: var(--theme-color);
+    --item7-color: var(--theme-color);
+    --item8-color: var(--theme-color);
+    --item9-color: var(--theme-color);
+    --item10-color: var(--theme-color);
+    --item11-color: var(--theme-color);
+    --item12-color: var(--theme-color);
+    --item1-color-rgb: var(--theme-color-rgb);
+    --item2-color-rgb: var(--theme-color-rgb);
+    --item3-color-rgb: var(--theme-color-rgb);
+    --item4-color-rgb: var(--theme-color-rgb);
+    --item5-color-rgb: var(--theme-color-rgb);
+    --item6-color-rgb: var(--theme-color-rgb);
+    --item7-color-rgb: var(--theme-color-rgb);
+    --item8-color-rgb: var(--theme-color-rgb);
+    --item9-color-rgb: var(--theme-color-rgb);
+    --item10-color-rgb: var(--theme-color-rgb);
+    --item11-color-rgb: var(--theme-color-rgb);
+    --item12-color-rgb: var(--theme-color-rgb);
+}
+
+.themeWhitebg[data-theme-palette="dual"],
+.themeBlackbg[data-theme-palette="dual"],
+.dualColorWhitebg,
+.dualColorBlackbg {
+    --item1-color: var(--theme-color);
+    --item2-color: var(--accent2-color);
+    --item3-color: var(--theme-color);
+    --item4-color: var(--accent2-color);
+    --item5-color: var(--theme-color);
+    --item6-color: var(--accent2-color);
+    --item7-color: var(--theme-color);
+    --item8-color: var(--accent2-color);
+    --item9-color: var(--theme-color);
+    --item10-color: var(--accent2-color);
+    --item11-color: var(--theme-color);
+    --item12-color: var(--accent2-color);
+    --item1-color-rgb: var(--theme-color-rgb);
+    --item2-color-rgb: var(--accent2-color-rgb);
+    --item3-color-rgb: var(--theme-color-rgb);
+    --item4-color-rgb: var(--accent2-color-rgb);
+    --item5-color-rgb: var(--theme-color-rgb);
+    --item6-color-rgb: var(--accent2-color-rgb);
+    --item7-color-rgb: var(--theme-color-rgb);
+    --item8-color-rgb: var(--accent2-color-rgb);
+    --item9-color-rgb: var(--theme-color-rgb);
+    --item10-color-rgb: var(--accent2-color-rgb);
+    --item11-color-rgb: var(--theme-color-rgb);
+    --item12-color-rgb: var(--accent2-color-rgb);
+}
+.mnoHighlightBlackbg,
+.mnoHighlightWhitebg {
+    --item1-color: var(--accent2-color);
+    --item2-color: var(--accent2-color);
+    --item3-color: var(--accent2-color);
+    --item4-color: var(--accent2-color);
+    --item5-color: var(--accent2-color);
+    --item6-color: var(--accent2-color);
+    --item7-color: var(--accent2-color);
+    --item8-color: var(--accent2-color);
+    --item9-color: var(--accent2-color);
+    --item10-color: var(--accent2-color);
+    --item11-color: var(--accent2-color);
+    --item12-color: var(--accent2-color);
+    --item1-color-rgb: var(--accent2-color-rgb);
+    --item2-color-rgb: var(--accent2-color-rgb);
+    --item3-color-rgb: var(--accent2-color-rgb);
+    --item4-color-rgb: var(--accent2-color-rgb);
+    --item5-color-rgb: var(--accent2-color-rgb);
+    --item6-color-rgb: var(--accent2-color-rgb);
+    --item7-color-rgb: var(--accent2-color-rgb);
+    --item8-color-rgb: var(--accent2-color-rgb);
+    --item9-color-rgb: var(--accent2-color-rgb);
+    --item10-color-rgb: var(--accent2-color-rgb);
+    --item11-color-rgb: var(--accent2-color-rgb);
+    --item12-color-rgb: var(--accent2-color-rgb);
+}
+.trtHighlightBlackbg,
+.trtHighlightWhitebg {
+    --item1-color: var(--accent3-color);
+    --item2-color: var(--accent3-color);
+    --item3-color: var(--accent3-color);
+    --item4-color: var(--accent3-color);
+    --item5-color: var(--accent3-color);
+    --item6-color: var(--accent3-color);
+    --item7-color: var(--accent3-color);
+    --item8-color: var(--accent3-color);
+    --item9-color: var(--accent3-color);
+    --item10-color: var(--accent3-color);
+    --item11-color: var(--accent3-color);
+    --item12-color: var(--accent3-color);
+    --item1-color-rgb: var(--accent3-color-rgb);
+    --item2-color-rgb: var(--accent3-color-rgb);
+    --item3-color-rgb: var(--accent3-color-rgb);
+    --item4-color-rgb: var(--accent3-color-rgb);
+    --item5-color-rgb: var(--accent3-color-rgb);
+    --item6-color-rgb: var(--accent3-color-rgb);
+    --item7-color-rgb: var(--accent3-color-rgb);
+    --item8-color-rgb: var(--accent3-color-rgb);
+    --item9-color-rgb: var(--accent3-color-rgb);
+    --item10-color-rgb: var(--accent3-color-rgb);
+    --item11-color-rgb: var(--accent3-color-rgb);
+    --item12-color-rgb: var(--accent3-color-rgb);
+}
+.mltHighlightBlackbg,
+.mltHighlightWhitebg {
+    --item1-color: var(--accent4-color);
+    --item2-color: var(--accent4-color);
+    --item3-color: var(--accent4-color);
+    --item4-color: var(--accent4-color);
+    --item5-color: var(--accent4-color);
+    --item6-color: var(--accent4-color);
+    --item7-color: var(--accent4-color);
+    --item8-color: var(--accent4-color);
+    --item9-color: var(--accent4-color);
+    --item10-color: var(--accent4-color);
+    --item11-color: var(--accent4-color);
+    --item12-color: var(--accent4-color);
+    --item1-color-rgb: var(--accent4-color-rgb);
+    --item2-color-rgb: var(--accent4-color-rgb);
+    --item3-color-rgb: var(--accent4-color-rgb);
+    --item4-color-rgb: var(--accent4-color-rgb);
+    --item5-color-rgb: var(--accent4-color-rgb);
+    --item6-color-rgb: var(--accent4-color-rgb);
+    --item7-color-rgb: var(--accent4-color-rgb);
+    --item8-color-rgb: var(--accent4-color-rgb);
+    --item9-color-rgb: var(--accent4-color-rgb);
+    --item10-color-rgb: var(--accent4-color-rgb);
+    --item11-color-rgb: var(--accent4-color-rgb);
+    --item12-color-rgb: var(--accent4-color-rgb);
+}
+.shdWhiteBlackbg,
+.tntBlackWhitebg {
+    --item1-color: var(--accent5-color);
+    --item2-color: var(--accent5-color);
+    --item3-color: var(--accent5-color);
+    --item4-color: var(--accent5-color);
+    --item5-color: var(--accent5-color);
+    --item6-color: var(--accent5-color);
+    --item7-color: var(--accent5-color);
+    --item8-color: var(--accent5-color);
+    --item9-color: var(--accent5-color);
+    --item10-color: var(--accent5-color);
+    --item11-color: var(--accent5-color);
+    --item12-color: var(--accent5-color);
+    --item1-color-rgb: var(--accent5-color-rgb);
+    --item2-color-rgb: var(--accent5-color-rgb);
+    --item3-color-rgb: var(--accent5-color-rgb);
+    --item4-color-rgb: var(--accent5-color-rgb);
+    --item5-color-rgb: var(--accent5-color-rgb);
+    --item6-color-rgb: var(--accent5-color-rgb);
+    --item7-color-rgb: var(--accent5-color-rgb);
+    --item8-color-rgb: var(--accent5-color-rgb);
+    --item9-color-rgb: var(--accent5-color-rgb);
+    --item10-color-rgb: var(--accent5-color-rgb);
+    --item11-color-rgb: var(--accent5-color-rgb);
+    --item12-color-rgb: var(--accent5-color-rgb);
+}
+.mltItemHighlightBlackbg,
+.mltItemHighlightWhitebg {
+    --item1-color: var(--accent6-color);
+    --item2-color: var(--accent6-color);
+    --item3-color: var(--accent6-color);
+    --item4-color: var(--accent6-color);
+    --item5-color: var(--accent6-color);
+    --item6-color: var(--accent6-color);
+    --item7-color: var(--accent6-color);
+    --item8-color: var(--accent6-color);
+    --item9-color: var(--accent6-color);
+    --item10-color: var(--accent6-color);
+    --item11-color: var(--accent6-color);
+    --item12-color: var(--accent6-color);
+    --item1-color-rgb: var(--accent6-color-rgb);
+    --item2-color-rgb: var(--accent6-color-rgb);
+    --item3-color-rgb: var(--accent6-color-rgb);
+    --item4-color-rgb: var(--accent6-color-rgb);
+    --item5-color-rgb: var(--accent6-color-rgb);
+    --item6-color-rgb: var(--accent6-color-rgb);
+    --item7-color-rgb: var(--accent6-color-rgb);
+    --item8-color-rgb: var(--accent6-color-rgb);
+    --item9-color-rgb: var(--accent6-color-rgb);
+    --item10-color-rgb: var(--accent6-color-rgb);
+    --item11-color-rgb: var(--accent6-color-rgb);
+    --item12-color-rgb: var(--accent6-color-rgb);
+}
+.item1 {
+    --icon-color: var(--item1-color);
+    --icon-color-rgb: var(--item1-color-rgb);
+    fill: var(--item1-color) !important;
+    stroke: var(--item1-color) !important;
+    background-color: var(--item1-color) !important;
+}
+.item2 {
+    --icon-color: var(--item2-color);
+    --icon-color-rgb: var(--item2-color-rgb);
+    fill: var(--item2-color) !important;
+    stroke: var(--item2-color) !important;
+    background-color: var(--item2-color) !important;
+}
+.item3 {
+    --icon-color: var(--item3-color);
+    --icon-color-rgb: var(--item3-color-rgb);
+    fill: var(--item3-color) !important;
+    stroke: var(--item3-color) !important;
+    background-color: var(--item3-color) !important;
+}
+.item4 {
+    --icon-color: var(--item4-color);
+    --icon-color-rgb: var(--item4-color-rgb);
+    fill: var(--item4-color) !important;
+    stroke: var(--item4-color) !important;
+    background-color: var(--item4-color) !important;
+}
+.item5 {
+    --icon-color: var(--item5-color);
+    --icon-color-rgb: var(--item5-color-rgb);
+    fill: var(--item5-color) !important;
+    stroke: var(--item5-color) !important;
+    background-color: var(--item5-color) !important;
+}
+.item6 {
+    --icon-color: var(--item6-color);
+    --icon-color-rgb: var(--item6-color-rgb);
+    fill: var(--item6-color) !important;
+    stroke: var(--item6-color) !important;
+    background-color: var(--item6-color) !important;
+}
+.item7 {
+    --icon-color: var(--item7-color);
+    --icon-color-rgb: var(--item7-color-rgb);
+    fill: var(--item7-color) !important;
+    stroke: var(--item7-color) !important;
+    background-color: var(--item7-color) !important;
+}
+.item8 {
+    --icon-color: var(--item8-color);
+    --icon-color-rgb: var(--item8-color-rgb);
+    fill: var(--item8-color) !important;
+    stroke: var(--item8-color) !important;
+    background-color: var(--item8-color) !important;
+}
+.item9 {
+    --icon-color: var(--item9-icon-color);
+    --icon-color-rgb: var(--item9-color-rgb);
+    fill: var(--item9-color) !important;
+    stroke: var(--item9-color) !important;
+    background-color: var(--item9-color) !important;
+}
+.item10 {
+    --icon-color: var(--item10-color);
+    --icon-color-rgb: var(--item10-color-rgb);
+    fill: var(--item10-color) !important;
+    stroke: var(--item10-color) !important;
+    background-color: var(--item10-color) !important;
+}
+.item11 {
+    --icon-color: var(--item11-color);
+    --icon-color-rgb: var(--item11-color-rgb);
+    fill: var(--item11-color) !important;
+    stroke: var(--item11-color) !important;
+    background-color: var(--item11-color) !important;
+}
+.item12 {
+    --icon-color: var(--item12-color);
+    --icon-color-rgb: var(--item12-color-rgb);
+    fill: var(--item12-color) !important;
+    stroke: var(--item12-color) !important;
+    background-color: var(--item12-color) !important;
+}
+.outerColor1 {
+    fill: var(--primary-color);
+    stroke: var(--primary-color);
+    flood-color: var(--primary-color);
+}
+
+/* // theme class name */
+.theme-color {
+    color: var(--item1-color) !important;
+}
+.theme-bg-color {
+    background-color: var(--item1-color) !important;
+}
+.theme-border-color {
+    border-color: var(--item1-color) !important;
+}
+.theme-fill {
+    fill: var(--item1-color) !important;
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.theme-stroke {
+    stroke: var(--item1-color) !important;
+}
+.accent1-color {
+    color: var(--item1-color) !important;
+}
+.accent1-bg-color {
+    background-color: var(--item1-color) !important;
+}
+.accent1-border-color {
+    border-color: var(--item1-color) !important;
+}
+.accent1-fill {
+    fill: var(--item1-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent1-stroke {
+    stroke: var(--item1-color) !important;
+}
+.accent2-color {
+    color: var(--item2-color) !important;
+}
+.accent2-bg-color {
+    background-color: var(--item2-color) !important;
+}
+.accent2-border-color {
+    border-color: var(--item2-color) !important;
+}
+.accent2-fill {
+    fill: var(--item2-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent2-stroke {
+    stroke: var(--item2-color) !important;
+}
+.accent3-color {
+    color: var(--item3-color) !important;
+}
+.accent3-bg-color {
+    background-color: var(--item3-color) !important;
+}
+.accent3-border-color {
+    border-color: var(--item3-color) !important;
+}
+.accent3-fill {
+    fill: var(--item3-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent3-stroke {
+    stroke: var(--item3-color) !important;
+}
+.accent4-color {
+    color: var(--item4-color) !important;
+}
+.accent4-bg-color {
+    background-color: var(--item4-color) !important;
+}
+.accent4-border-color {
+    border-color: var(--item4-color) !important;
+}
+.accent4-fill {
+    fill: var(--item4-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent4-stroke {
+    stroke: var(--item4-color) !important;
+}
+.accent5-color {
+    color: var(--item5-color) !important;
+}
+.accent5-bg-color {
+    background-color: var(--item5-color) !important;
+}
+.accent5-border-color {
+    border-color: var(--item5-color) !important;
+}
+.accent5-fill {
+    fill: var(--item5-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent5-stroke {
+    stroke: var(--item5-color) !important;
+}
+.accent6-color {
+    color: var(--item6-color) !important;
+}
+.accent6-bg-color {
+    background-color: var(--item6-color) !important;
+}
+.accent6-border-color {
+    border-color: var(--item6-color) !important;
+}
+.accent6-fill {
+    fill: var(--item6-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent6-stroke {
+    stroke: var(--item6-color) !important;
+}
+.accent7-color {
+    color: var(--item7-color) !important;
+}
+.accent7-bg-color {
+    background-color: var(--item7-color) !important;
+}
+.accent7-border-color {
+    border-color: var(--item7-color) !important;
+}
+.accent7-fill {
+    fill: var(--item7-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent7-stroke {
+    stroke: var(--item7-color) !important;
+}
+.accent8-color {
+    color: var(--item8-color) !important;
+}
+.accent8-bg-color {
+    background-color: var(--item8-color) !important;
+}
+.accent8-border-color {
+    border-color: var(--item8-color) !important;
+}
+.accent8-fill {
+    fill: var(--item8-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent8-stroke {
+    stroke: var(--item8-color) !important;
+}
+.accent9-color {
+    color: var(--item9-color) !important;
+}
+.accent9-bg-color {
+    background-color: var(--item9-color) !important;
+}
+.accent9-border-color {
+    border-color: var(--item9-color) !important;
+}
+.accent9-fill {
+    fill: var(--item9-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent9-stroke {
+    stroke: var(--item9-color) !important;
+}
+.accent10-color {
+    color: var(--item10-color) !important;
+}
+.accent10-bg-color {
+    background-color: var(--item10-color) !important;
+}
+.accent10-border-color {
+    border-color: var(--item10-color) !important;
+}
+.accent10-fill {
+    fill: var(--item10-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent10-stroke {
+    stroke: var(--item10-color) !important;
+}
+.accent11-color {
+    color: var(--item11-color) !important;
+}
+.accent11-bg-color {
+    background-color: var(--item11-color) !important;
+}
+.accent11-border-color {
+    border-color: var(--item11-color) !important;
+}
+.accent11-fill {
+    fill: var(--item11-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent11-stroke {
+    stroke: var(--item11-color) !important;
+}
+.accent12-color {
+    color: var(--item12-color) !important;
+}
+.accent12-bg-color {
+    background-color: var(--item12-color) !important;
+}
+.accent12-border-color {
+    border-color: var(--item12-color) !important;
+}
+.accent12-fill {
+    fill: var(--item12-color) !important;
+    --icon-color: var(--item-icon-color);
+    --icon-color-rgb: var(--item-icon-color-rgb);
+}
+.accent12-stroke {
+    stroke: var(--item12-color) !important;
+}
+
+.contrast1-color {
+    color: rgba(var(--contrast1-color-rgb), 1) !important;
+}
+.contrast-color {
+    color: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.contrast-bg-color {
+    background-color: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.contrast-border-color {
+    border-color: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.contrast-fill {
+    fill: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.contrast-stroke {
+    stroke: rgba(var(--contrast-color-rgb), 1) !important;
+}
+.secondary-color {
+    color: var(--secondary-color) !important;
+}
+.secondary-bg-color {
+    background-color: var(--secondary-color) !important;
+}
+.secondary-border-color {
+    border-color: var(--secondary-color) !important;
+}
+.secondary-fill {
+    fill: var(--secondary-color) !important;
+}
+.secondary-stroke {
+    stroke: var(--secondary-color) !important;
+}
+.alter-secondary-color {
+    color: var(--alter-secondary-color) !important;
+}
+.alter-secondary-bg-color {
+    background-color: var(--alter-secondary-color) !important;
+}
+.alter-secondary-border-color {
+    border-color: var(--alter-secondary-color) !important;
+}
+.alter-secondary-fill {
+    fill: var(--alter-secondary-color) !important;
+}
+.alter-secondary-stroke {
+    stroke: var(--alter-secondary-color) !important;
+}
+.tertiary-color {
+    color: var(--tertiary-color) !important;
+}
+.tertiary-bg-color {
+    background-color: var(--tertiary-color) !important;
+}
+.tertiary-border-color {
+    border-color: var(--tertiary-color) !important;
+}
+.tertiary-fill {
+    fill: var(--tertiary-color) !important;
+}
+.tertiary-stroke {
+    stroke: var(--tertiary-color) !important;
+}
+.alter-tertiary-color {
+    color: var(--alter-tertiary-color) !important;
+}
+.alter-tertiary-bg-color {
+    background-color: var(--alter-tertiary-color) !important;
+}
+.alter-tertiary-border-color {
+    border-color: var(--alter-tertiary-color) !important;
+}
+.alter-tertiary-fill {
+    fill: var(--alter-tertiary-color) !important;
+}
+.alter-tertiary-stroke {
+    stroke: var(--alter-tertiary-color) !important;
+}
+.background-color {
+    color: var(--single-bg-color) !important;
+}
+.background-bg-color {
+    background: var(--single-bg-color) !important;
+}
+.background-border-color {
+    border-color: var(--single-bg-color) !important;
+}
+.background-fill {
+    fill: var(--single-bg-color) !important;
+}
+.background-stroke {
+    stroke: var(--single-bg-color) !important;
+}
+
+.alter-background-color {
+    color: var(--alter-bg-color) !important;
+}
+.alter-background-bg-color {
+    background-color: var(--alter-bg-color) !important;
+}
+.alter-background-border-color {
+    border-color: var(--alter-bg-color) !important;
+}
+.alter-background-fill {
+    fill: var(--alter-bg-color) !important;
+}
+.alter-background-stroke {
+    stroke: var(--alter-bg-color) !important;
+}
+.inner-color {
+    color: var(--inner-color) !important;
+}
+.inner-bg-color {
+    background-color: var(--inner-color) !important;
+}
+.inner-border-color {
+    border-color: var(--inner-color) !important;
+}
+.inner-fill {
+    --icon-color: var(--inner-color);
+    fill: var(--inner-color) !important;
+}
+.inner-stroke {
+    --icon-color: var(--inner-color);
+    stroke: var(--inner-color) !important;
+}
+
+/* title subtitle label color */
+
+/* title subtitle label background color as bg */
+/* important removed becuase of mood menu color mapping issue - contact person(BALAKUMAR/MADHU) */
+.titleNode.transparentBg,
+.titleNode.backgroundColorBg,
+.TITLE.transparentBg,
+.TITLE.backgroundColorBg {
+    color: var(--title-color);
+}
+.subTitleNode.transparentBg,
+.subTitleNode.backgroundColorBg,
+.textBoxEditor.backgroundColorBg,
+.SUBTITLE.transparentBg,
+.SUBTITLE.backgroundColorBg {
+    color: var(--subtitle-color);
+}
+.textBoxEditor.backgroundColorBg {
+    color: var(--subtitle-color) !important;
+}
+#TEXTBOX_HOLDER .textBoxEditor.transparentBg {
+    color: var(--subtitle-color);
+}
+#slideplaceholdertext.transparentBg,
+#slideplaceholdertext.backgroundColorBg,
+.titleLabelNode.transparentBg,
+.titleLabelNode.backgroundColorBg,
+.SLIDE_LABEL.transparentBg,
+.SLIDE_LABEL.backgroundColorBg {
+    color: var(--label-color);
+}
+.textBg.transparentBg,
+.bgnode.transparentBg,
+.SUBTITLE.transparentBg.backgroundBg {
+    background-color: transparent !important;
+    border-color: var(--item1-color) !important;
+}
+.textBg.backgroundColorBg,
+.bgnode.backgroundColorBg,
+.SUBTITLE.backgroundColorBg.backgroundBg {
+    background-color: var(--bg-color) !important; /* Karthi changed color variiable --alter-bg-color to -bg-color for white bg*/
+    border-color: var(--item1-color) !important;
+}
+.bgnode.backgroundColorBg {
+    --bg-opacity: 1;
+    background-color: rgba(var(--bg-color-rgb), var(--bg-opacity)) !important;
+}
+/* title subtitle label dark color as bg */
+.titleNode.subtitleColorBg,
+.TITLE.subtitleColorBg,
+.subTitleNode.subtitleColorBg,
+.SUBTITLE.subtitleColorBg,
+#slideplaceholdertext.subtitleColorBg,
+.titleLabelNode.subtitleColorBg,
+.SLIDE_LABEL.subtitleColorBg {
+    color: var(--alter-secondary-color) !important;
+}
+#TEXTBOX_HOLDER .textBoxEditor {
+    color: var(--alter-secondary-color);
+}
+#TEXTBOX_HOLDER .textBoxEditor.subtitleColorBg {
+    color: var(--alter-secondary-color) !important;
+}
+.textBg.subtitleColorBg,
+.bgnode.subtitleColorBg,
+#TEXTBOX_HOLDER .textBoxEditor.subtitleColorBg,
+.SUBTITLE.subtitleColorBg.backgroundBg {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+.bgnode.subtitleColorBg {
+    --bg-opacity: 1;
+    background-color: rgba(var(--secondary-color-rgb), var(--bg-opacity)) !important;
+}
+#slideplaceholder.subtitleColorBg[data-placeholder-type="icon"] #PLACEHOLDER_ICON,
+#slideplaceholder.subtitleColorBg[data-placeholder-type="icon"] #PLACEHOLDER_ICON .iconfill1 {
+    fill: var(--alter-secondary-color) !important;
+    stroke: var(--alter-secondary-color) !important;
+}
+#slideplaceholder.subtitleColorBg[data-placeholder-type="icon"] #PLACEHOLDER_ICON .iconstroke1 {
+    stroke: var(--alter-secondary-color) !important;
+}
+/* title subtitle label dark color as bg */
+.titleNode.titleColorBg,
+.subTitleNode.titleColorBg,
+.TITLE.titleColorBg,
+.textBoxEditor.titleColorBg,
+.SUBTITLE.titleColorBg,
+#slideplaceholdertext.titleColorBg,
+.titleLabelNode.titleColorBg,
+.SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast1-color-rgb)) !important;
+}
+
+.whiteaccent1bg .titleNode.titleColorBg,
+.whiteaccent2bg .titleNode.titleColorBg,
+.whiteaccent3bg .titleNode.titleColorBg,
+.whiteaccent4bg .titleNode.titleColorBg,
+.whiteaccent5bg .titleNode.titleColorBg,
+.whiteaccent6bg .titleNode.titleColorBg,
+.balckaccent2bg .titleNode.titleColorBg,
+.balckaccent3bg .titleNode.titleColorBg,
+.balckaccent4bg .titleNode.titleColorBg,
+.balckaccent5bg .titleNode.titleColorBg,
+.balckaccent6bg .titleNode.titleColorBg,
+.whitethemebg .titleNode.titleColorBg,
+.whitethemebg .SLIDE_LABEL.titleColorBg,
+.blackthemebg .titleNode.titleColorBg .whiteaccent1bg .TITLE.titleColorBg,
+.whiteaccent2bg .TITLE.titleColorBg,
+.whiteaccent3bg .TITLE.titleColorBg,
+.whiteaccent4bg .TITLE.titleColorBg,
+.whiteaccent5bg .TITLE.titleColorBg,
+.whiteaccent6bg .TITLE.titleColorBg,
+.balckaccent2bg .TITLE.titleColorBg,
+.balckaccent3bg .TITLE.titleColorBg,
+.balckaccent4bg .TITLE.titleColorBg,
+.balckaccent5bg .TITLE.titleColorBg,
+.balckaccent6bg .TITLE.titleColorBg,
+.whitethemebg .TITLE.titleColorBg,
+.blackthemebg .TITLE.titleColorBg .whiteaccent1bg .subTitleNode.titleColorBg,
+.whiteaccent2bg .subTitleNode.titleColorBg,
+.whiteaccent3bg .subTitleNode.titleColorBg,
+.whiteaccent4bg .subTitleNode.titleColorBg,
+.whiteaccent5bg .subTitleNode.titleColorBg,
+.whiteaccent6bg .subTitleNode.titleColorBg,
+.balckaccent2bg .subTitleNode.titleColorBg,
+.balckaccent3bg .subTitleNode.titleColorBg,
+.balckaccent4bg .subTitleNode.titleColorBg,
+.balckaccent5bg .subTitleNode.titleColorBg,
+.balckaccent6bg .subTitleNode.titleColorBg,
+.whitethemebg .subTitleNode.titleColorBg,
+.blackthemebg .subTitleNode.titleColorBg .whiteaccent1bg .titleLabelNode.titleColorBg,
+.whiteaccent2bg .SUBTITLE.titleColorBg,
+.whiteaccent3bg .SUBTITLE.titleColorBg,
+.whiteaccent4bg .SUBTITLE.titleColorBg,
+.whiteaccent5bg .SUBTITLE.titleColorBg,
+.whiteaccent6bg .SUBTITLE.titleColorBg,
+.balckaccent2bg .SUBTITLE.titleColorBg,
+.balckaccent3bg .SUBTITLE.titleColorBg,
+.balckaccent4bg .SUBTITLE.titleColorBg,
+.balckaccent5bg .SUBTITLE.titleColorBg,
+.balckaccent6bg .SUBTITLE.titleColorBg,
+.whitethemebg .SUBTITLE.titleColorBg,
+.blackthemebg .SUBTITLE.titleColorBg .whiteaccent1bg .subTitleNode.titleColorBg,
+.whiteaccent2bg .titleLabelNode.titleColorBg,
+.whiteaccent3bg .titleLabelNode.titleColorBg,
+.whiteaccent4bg .titleLabelNode.titleColorBg,
+.whiteaccent5bg .titleLabelNode.titleColorBg,
+.whiteaccent6bg .titleLabelNode.titleColorBg,
+.balckaccent2bg .titleLabelNode.titleColorBg,
+.balckaccent3bg .titleLabelNode.titleColorBg,
+.balckaccent4bg .titleLabelNode.titleColorBg,
+.balckaccent5bg .titleLabelNode.titleColorBg,
+.balckaccent6bg .titleLabelNode.titleColorBg,
+.whitethemebg .titleLabelNode.titleColorBg,
+.blackthemebg .titleLabelNode.titleColorBg {
+    color: var(--secondary-color) !important;
+}
+
+.blackaccent2bg .titleNode.titleColorBg,
+.blackaccent2bg .subTitleNode.titleColorBg,
+.blackaccent2bg .titleLabelNode.titleColorBg,
+.blackaccent2bg .TITLE.titleColorBg,
+.blackaccent2bg .textBoxEditor.titleColorBg,
+.blackaccent2bg .SUBTITLE.titleColorBg,
+.blackaccent2bg #slideplaceholdertext.titleColorBg,
+.blackaccent2bg .SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast2-color-rgb)) !important;
+}
+.blackaccent3bg .titleNode.titleColorBg,
+.blackaccent3bg .subTitleNode.titleColorBg,
+.blackaccent3bg .TITLE.titleColorBg,
+.blackaccent3bg .textBoxEditor.titleColorBg,
+.blackaccent3bg .SUBTITLE.titleColorBg,
+.blackaccent3bg #slideplaceholdertext.titleColorBg,
+.blackaccent3bg .titleLabelNode.titleColorBg,
+.blackaccent3bg .SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast3-color-rgb)) !important;
+}
+.blackaccent4bg .titleNode.titleColorBg,
+.blackaccent4bg .subTitleNode.titleColorBg,
+.blackaccent4bg .TITLE.titleColorBg,
+.blackaccent4bg .textBoxEditor.titleColorBg,
+.blackaccent4bg .SUBTITLE.titleColorBg,
+.blackaccent4bg #slideplaceholdertext.titleColorBg,
+.blackaccent4bg .titleLabelNode.titleColorBg,
+.blackaccent4bg .SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast4-color-rgb)) !important;
+}
+.blackaccent5bg .titleNode.titleColorBg,
+.blackaccent5bg .subTitleNode.titleColorBg,
+.blackaccent5bg .TITLE.titleColorBg,
+.blackaccent5bg .textBoxEditor.titleColorBg,
+.blackaccent5bg .SUBTITLE.titleColorBg,
+.blackaccent5bg #slideplaceholdertext.titleColorBg,
+.blackaccent5bg .titleLabelNode.titleColorBg,
+.blackaccent5bg .SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast5-color-rgb)) !important;
+}
+.blackaccent6bg .titleNode.titleColorBg,
+.blackaccent6bg .subTitleNode.titleColorBg,
+.blackaccent6bg .TITLE.titleColorBg,
+.blackaccent6bg .textBoxEditor.titleColorBg,
+.blackaccent6bg .SUBTITLE.titleColorBg,
+.blackaccent6bg #slideplaceholdertext.titleColorBg,
+.blackaccent6bg .titleLabelNode.titleColorBg,
+.blackaccent6bg .SLIDE_LABEL.titleColorBg {
+    color: rgb(var(--contrast6-color-rgb)) !important;
+}
+.textBg.titleColorBg,
+.bgnode.titleColorBg,
+.SUBTITLE.titleColorBg.backgroundBg {
+    background-color: var(--title-highlight-color) !important;
+    border-color: var(--title-highlight-color) !important;
+}
+.bgnode.titleColorBg {
+    --bg-opacity: 1;
+    background-color: rgba(var(--title-highlight-color-rgb), var(--bg-opacity)) !important;
+}
+.textbghighlight .gradient1bg,
+.textbghighlight .gradient2bg,
+.textbghighlight .gradient1Whitebg,
+.textbghighlight .gradient2Whitebg,
+.textbghighlight .gradient1Blackbg,
+.textbghighlight .gradient2Blackbg {
+    background-image: unset !important;
+}
+.textbghighlight .gradient1bg,
+.textbghighlight .gradient1Whitebg,
+.textbghighlight .gradient1Blackbg {
+    background-color: rgba(var(--gradient-theme1-rgb), 1) !important;
+}
+.textbghighlight .gradient2bg,
+.textbghighlight .gradient2Whitebg,
+.textbghighlight .gradient2Blackbg {
+    background-color: rgba(var(--gradient-theme2-rgb), 1) !important;
+}
+.themeWhitebg[data-titlecolorstyle="dark"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="dark"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="dark"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="dark"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="dark"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="dark"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--secondary-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="tertiary"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="tertiary"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="tertiary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="tertiary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="tertiary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="tertiary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--tertiary-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="quaternary"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="quaternary"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="quaternary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="quaternary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="quaternary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="quaternary"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--quaternary-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme1"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme1"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item1-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme2"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme2"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item2-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme3"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme3"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme3"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme3"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme3"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme3"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item3-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme4"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme4"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme4"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme4"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme4"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme4"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item4-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme5"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme5"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme5"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme5"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme5"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme5"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item5-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="theme6"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="theme6"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="theme6"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme6"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="theme6"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="theme6"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--item6-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="gradient1"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="gradient1"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="gradient1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradient1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="gradient1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradient1"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--gradient1-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="gradient2"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="gradient2"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="gradient2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradient2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="gradient2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradient2"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    color: rgb(var(--gradient2-color-rgb)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="dark"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] {
+    color: rgb(var(--alter-secondary-color-rgb)) !important;
+}
+.themeBlackbg[data-titlecolorstyle="dark"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] {
+    color: rgb(var(--secondary-color)) !important;
+}
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--secondary-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--alter-secondary-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--item4-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+/* form here */
+
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--item4-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--item4-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span {
+    background-image: linear-gradient(130deg, rgba(var(--item1-color-rgb), 1) 20%, rgba(var(--item2-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]),
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]),
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]) {
+    background-image: linear-gradient(130deg, rgba(var(--gradient1-color-rgb), 1) 20%, rgba(var(--gradient2-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"],
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span {
+    background-image: linear-gradient(130deg, rgba(var(--gradient1-color-rgb), 1) 20%, rgba(var(--gradient2-color-rgb), 1) 70%) !important;
+    webkit-text-fill-color: inherit;
+    -moz-text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent !important;
+}
+
+/* for empty gradient color */
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE div span:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE span:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"] .assetParent:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode:not([fixedcolortext*="true"]):empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"]:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] span:empty:before,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE[data-background="subtitleColorBg"] div span:empty:before {
+    text-shadow: 0 0px 0px rgba(var(--secondary-color-rgb), 0.3);
+}
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sup,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sup,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sup,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #TITLE sub,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode sub,
+.themeWhitebg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeBlackbg[data-titlecolorstyle="singletitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeWhitebg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeBlackbg[data-titlecolorstyle="gradienttitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeWhitebg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeBlackbg[data-titlecolorstyle="dualtitlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeWhitebg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub,
+.themeBlackbg[data-titlecolorstyle="multititlegradient"]:not([class*="lightText"]):not([class*="darkText"]) #sgTitleNode0 sub {
+    background-image: inherit !important;
+    webkit-text-fill-color: inherit !important;
+    -moz-text-fill-color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+    background-clip: inherit !important;
+    -webkit-background-clip: inherit !important;
+    color: inherit !important;
+}

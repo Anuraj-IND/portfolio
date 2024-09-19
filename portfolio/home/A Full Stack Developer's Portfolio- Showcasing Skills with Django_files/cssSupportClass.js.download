@@ -1,0 +1,889 @@
+function removeAnimation(animationName) {
+    var style = document.getElementById("CssAnimStyle");
+    if (style && style.sheet && style.sheet.cssRules && style.sheet.cssRules.length > 0) {
+        for (var i = 0; i < style.sheet.cssRules.length; i++) {
+            if (style.sheet.cssRules[i].name == animationName) {
+                style.sheet.deleteRule(i);
+                return true;
+            }
+        }
+    }
+    return true;
+}
+
+function clearParentChilds(parentDiv) {
+    try {
+        if (parentDiv && parentDiv.firstChild)
+            while (parentDiv.firstChild) {
+                parentDiv.firstChild.remove();
+            }
+    } catch (error) {
+        console.log("SG - Error on clearing childs on css parent");
+    }
+}
+
+function doCssAnimation(parentDivInCSS = null, type = "in", element, animationName = "left", direction = "x", duration = 1, delay = 0, fromValue = "-50%", toValue = "0%", hasAlpha = false, endAlpha = 1, animStyle = "ease-in-out", startAlpha = 1) {
+    var style = !!parentDivInCSS ? parentDivInCSS.querySelector("[id='CssAnimStyle']") : document.getElementById("CssAnimStyle");
+    removeAnimation(animationName);
+    if (style && style.sheet && element) {
+        var xStart = direction == "x" ? fromValue : "0";
+        var yStart = direction == "y" ? fromValue : "0";
+        var xEnd = direction == "x" ? toValue : "0";
+        var yEnd = direction == "y" ? toValue : "0";
+        var scaleStart = direction == "scale" || direction == "scalex" ? fromValue : 1;
+        var scaleEnd = direction == "scale" || direction == "scalex" ? toValue : 1;
+        var alphaStart = type == "in" && hasAlpha == true ? 0 : endAlpha;
+        alphaStart = type == "out" && hasAlpha ? startAlpha : alphaStart;
+        var alphaEnd = type == "in" && hasAlpha == true ? endAlpha : endAlpha <= 1 ? endAlpha : 0;
+        style.sheet.insertRule(
+            "@keyframes " +
+                animationName +
+                " {\
+                0% {opacity:" +
+                alphaStart +
+                ";transform:translate(" +
+                xStart +
+                "," +
+                yStart +
+                ") scale(" +
+                scaleStart +
+                "," +
+                (direction == "scalex" ? 1 : scaleStart) +
+                ")}\
+                100% {opacity:" +
+                alphaEnd +
+                ";transform:translate(" +
+                xEnd +
+                "," +
+                yEnd +
+                ") scale(" +
+                scaleEnd +
+                "," +
+                (direction == "scalex" ? 1 : scaleEnd) +
+                ")}\
+            }"
+        );
+        let durationfactor = 1;
+        triggerCssAnimation(element, animationName, duration * durationfactor, animStyle, delay * durationfactor);
+    }
+}
+
+function triggerCssAnimation(element, animationName, duration, animStyle, delay) {
+    setTimeout(() => {
+        element.style.animation = animationName + " " + duration + "s " + animStyle + " forwards";
+    }, delay * 1000);
+}
+
+function generateRandomStringCSS(length) {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    for (var i = 0; i < length; i++) text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
+
+function createIntroForCoverPage(parent, animationData, playMoodTransition, rotationValue = "", slideContent, objMoodData, customClass = "", themeColor = "") {
+    // Creating and play intro animation for coverpage using lottie animation
+    let animationJSON = animationData ? animationData.filter((obj) => obj.id == "intro") : [];
+    let objData;
+    if (animationJSON.length > 0 && playMoodTransition != false) {
+        let lottieAnimDiv = document.createElement("div");
+        lottieAnimDiv.id = "lottieAnimDiv";
+        // lottieAnimDiv.className = (slideContent ? slideContent.dataset.themeGroupName : "") + " " + customClass;
+        lottieAnimDiv.className = (themeColor ? themeColor : "themeWhitebg") + " " + customClass;
+        lottieAnimDiv.style.transform = rotationValue;
+        lottieAnimDiv.style.zIndex = "10";
+        lottieAnimDiv.style.pointerEvents = "none";
+        lottieAnimDiv.style.width = "100%";
+        lottieAnimDiv.style.height = "100%";
+        lottieAnimDiv.style.left = "0px";
+        lottieAnimDiv.style.top = "0px";
+        lottieAnimDiv.style.display = "block";
+        lottieAnimDiv.style.background = "transparent";
+        lottieAnimDiv.style.position = "absolute";
+        lottieAnimDiv.style.setProperty("background-color", "transparent", "important");
+        lottieAnimDiv.style.setProperty("background", "unset", "important");
+        parent.appendChild(lottieAnimDiv);
+
+        let themePallet = slideContent.hasAttribute("data-theme-palette") ? slideContent.getAttribute("data-theme-palette") : "";
+        let themeTint = slideContent.hasAttribute("data-theme-tint") ? slideContent.getAttribute("data-theme-tint") : "";
+        lottieAnimDiv.setAttribute("data-theme-palette", themePallet);
+        lottieAnimDiv.setAttribute("data-theme-tint", "true");
+
+        let jsonData = animationJSON[0].data;
+
+        let params = {
+            container: lottieAnimDiv,
+            renderer: jsonData.type ? jsonData.type : "svg",
+            loop: false,
+            autoplay: false,
+            progressiveLoad: false,
+            animationData: jsonData,
+        };
+        objData = {};
+        objData.jsonData = jsonData;
+        objData.framesData = jsonData.flow;
+        objData.lottieAnimDiv = lottieAnimDiv;
+        objData.lottieAnimation = bodymovin.loadAnimation(params);
+        let imageNodes = lottieAnimDiv.getElementsByTagName("image");
+        let svgNode = lottieAnimDiv.getElementsByTagName("svg");
+        if (svgNode.length > 0) svgNode[0].classList.add("GRAPHIC");
+        if (imageNodes.length > 0 && objMoodData?.appStaticURL) {
+            for (let a = 0; a < imageNodes.length; a++) {
+                if (imageNodes[a].hasAttribute("href") && imageNodes[a].getAttribute("href").includes(objMoodData.appStaticURL) == false) {
+                    let loadimage = false;
+                    let isValidPosition = imageNodes[a].hasAttribute("width") && imageNodes[a].hasAttribute("height");
+                    if (imageNodes[a].getAttribute("href").includes("images/presentationsai.png")) {
+                        let newLogoSrc = objMoodData.companyLogo;
+                        // let newLogoSrc = objMoodData.companyDetails.logos?.filter((obj) => obj.type == "primary")?.[0]?.url;
+                        // if (!newLogoSrc) newLogoSrc = objMoodData.companyDetails.logos?.filter((obj) => obj.type == "logo")?.[0]?.url;
+                        // if (!newLogoSrc && objMoodData.companyDetails.logos?.length > 0) newLogoSrc = objMoodData.companyDetails.logos[0]?.url;
+
+                        let isImage = newLogoSrc?.endsWith(".png") || newLogoSrc?.endsWith(".jpg") || newLogoSrc?.endsWith(".jpeg") || newLogoSrc?.endsWith(".gif");
+                        if (!isImage && newLogoSrc?.includes("?") && newLogoSrc?.split("?")?.length > 0) {
+                            let newSrc = newLogoSrc.split("?")[0];
+                            isImage = newSrc?.endsWith(".png") || newSrc?.endsWith(".jpg") || newSrc?.endsWith(".jpeg") || newSrc?.endsWith(".gif");
+                        }
+                        if (newLogoSrc && isImage && isValidPosition && objMoodData.companyLogo) {
+                            imageNodes[a].setAttribute("href", newLogoSrc);
+                        } else {
+                            if (newLogoSrc && isValidPosition && objMoodData.companyLogo && !objMoodData.companyLogo?.includes(".svg")) {
+                                // if (newLogoSrc.endsWith(".svg")) {
+                                let imgNode = document.createElement("img");
+                                imgNode.style.width = "100%";
+                                imgNode.style.height = "100%";
+                                imgNode.style.objectFit = "contain";
+                                imgNode.src = newLogoSrc;
+                                // if (jsonData.logocontrast) imgNode.style.filter = jsonData.logocontrast == "light" ? "brightness(0) invert(1)" : jsonData.logocontrast == "dark" ? "brightness(0)" : "unset";
+                                // else imgNode.classList.add("logoBrightness");
+                                imgNode.onerror = function () {
+                                    let newPath = DiagramUtils.checkAppStaticUrl(imageNodes[a].getAttribute("href"), objMoodData.appStaticURL);
+                                    imgNode.src = newPath;
+                                    console.log("SG - Company logo Load Error so loading default one");
+                                };
+
+                                let ns = "http://www.w3.org/2000/svg";
+                                let foreignObject = document.createElementNS(ns, "foreignObject");
+                                foreignObject.id = "foreignObj";
+                                foreignObject.setAttribute("width", imageNodes[a].getAttribute("width"));
+                                foreignObject.setAttribute("height", imageNodes[a].getAttribute("height"));
+                                foreignObject.setAttribute("x", "0");
+                                foreignObject.setAttribute("y", "0");
+                                foreignObject.appendChild(imgNode);
+                                imageNodes[a].parentNode.insertBefore(foreignObject, imageNodes[a]);
+                                imageNodes[a].style.display = "none";
+                                if (jsonData.logocontrastclass) foreignObject.classList.add(jsonData.logocontrastclass);
+                                // } else {
+                                //     imageNodes[a].setAttribute("href", newLogoSrc);
+                                //     imageNodes[a].style.display = "block";
+                                // }
+                                loadimage = true;
+                            } else if (newLogoSrc && isValidPosition && objMoodData.companyLogo && objMoodData.companyLogo?.includes(".svg")) imageNodes[a].setAttribute("href", newLogoSrc);
+                        }
+                        // if (jsonData.logocontrast) imageNodes[a].style.filter = jsonData.logocontrast == "light" ? "brightness(0) invert(1)" : jsonData.logocontrast == "dark" ? "brightness(0)" : "unset";
+                        // else imageNodes[a].classList.add("logoBrightness");
+                        imageNodes[a].setAttribute("preserveAspectRatio", "xMidYMid");
+                    }
+                    if (!loadimage || window.location.hostname == "localhost") {
+                        let imageURL = imageNodes[a].getAttribute("href");
+                        let urlOfImage = imageURL?.startsWith("http") || imageURL?.startsWith(objMoodData.appStaticURL) ? imageURL : objMoodData.appStaticURL + imageURL;
+                        imageNodes[a].setAttribute("href", urlOfImage);
+                    }
+                }
+            }
+        }
+        objData.type = jsonData.type ? jsonData.type : "svg";
+        objData.frameRate = jsonData.fr ? jsonData.fr : 30;
+        objData.startFrame = jsonData.sf ? jsonData.sf : 0;
+        objData.endFrame = jsonData.ef ? jsonData.ef : 0;
+        objData.transitionDelay = jsonData.ts ? jsonData.ts : 0;
+        objData.introdelay = (objData.transitionDelay / objData.frameRate) * 1000;
+    }
+    return objData;
+}
+
+function removeTransitionClassNames(slide0Data, slide1Data) {
+    if (!slide0Data && !slide1Data) return;
+    for (let a = 0; a < 2; a++) {
+        let slideData = a == 0 ? slide0Data : slide1Data;
+        if (slideData) {
+            slideData.classList.remove("slideAnimationRtL");
+            slideData.classList.remove("slideAnimationRtLHide");
+            slideData.classList.remove("slideAnimationLtR");
+            slideData.classList.remove("slideAnimationLtRHide");
+            slideData.classList.remove("slideAnimationBtT");
+            slideData.classList.remove("slideAnimationBtTHide");
+            slideData.classList.remove("slideAnimationTtB");
+            slideData.classList.remove("slideAnimationTtBHide");
+            slideData.classList.remove("slideAnimationFadeIn");
+            slideData.classList.remove("slideAnimationFadeInHide");
+
+            slideData.classList.remove("slideZoomInHide");
+            slideData.classList.remove("slideZoomInShow");
+            slideData.classList.remove("slideZoomOutHide");
+            slideData.classList.remove("slideZoomOutShow");
+            slideData.classList.remove("slideZoomInOutHide");
+            slideData.classList.remove("slideZoomInOutShow");
+            slideData.classList.remove("slideZoomOutInHide");
+            slideData.classList.remove("slideZoomOutInShow");
+
+            slideData.classList.remove("slideAnimationLT");
+            slideData.classList.remove(".slideAnimationRT");
+            slideData.classList.remove("slideAnimationBL");
+            slideData.classList.remove("slideAnimationBR");
+            slideData.classList.remove("slideAnimationCenter");
+
+            slideData.classList.remove("slideAnimationDiagonalTL");
+            slideData.classList.remove("slideAnimationDiagonalTLHide");
+            slideData.classList.remove("slideAnimationDiagonalTR");
+            slideData.classList.remove("slideAnimationDiagonalTRHide");
+            slideData.classList.remove("slideAnimationDiagonalBL");
+            slideData.classList.remove("slideAnimationDiagonalBLHide");
+            slideData.classList.remove("slideAnimationDiagonalBR");
+            slideData.classList.remove("slideAnimationDiagonalBRHide");
+            slideData.classList.remove("slideAnimationDiagonalTLreverse");
+            slideData.classList.remove("slideAnimationDiagonalTLreverseHide");
+            slideData.classList.remove("slideAnimationDiagonalTRreverse");
+            slideData.classList.remove("slideAnimationDiagonalTRreverseHide");
+            slideData.classList.remove("slideAnimationDiagonalBLreverse");
+            slideData.classList.remove("slideAnimationDiagonalBLreverseHide");
+            slideData.classList.remove("slideAnimationDiagonalBRreverse");
+            slideData.classList.remove("slideAnimationDiagonalBRreverseHide");
+        }
+    }
+}
+
+function commonImageLoadTransition(animationJsonData, moodParentDiv, callback, objMoodData) {
+    if (!animationJsonData || !moodParentDiv) {
+        callback();
+        return;
+    }
+    let animationJSON = animationJsonData ? animationJsonData.filter((obj) => obj.id == "intro") : [];
+    let transitionJSON = animationJsonData ? animationJsonData.filter((obj) => obj.id == "transition") : [];
+
+    let arrAssets = [];
+    if (animationJSON?.[0]?.data?.assets?.length > 0) arrAssets = animationJSON[0].data.assets;
+    if (transitionJSON?.[0]?.data?.assets?.length > 0) arrAssets = arrAssets.concat(transitionJSON[0].data.assets);
+
+    if (arrAssets.length > 0) {
+        let totalCount = arrAssets.length;
+        let loadCount = 0;
+        for (let a = 0; a < arrAssets.length; a++) {
+            let path = arrAssets[a].u;
+            let fileName = arrAssets[a].p;
+            if (path && fileName) {
+                let dummyImage = document.createElement("img");
+                dummyImage.style.position = "absolute";
+                dummyImage.style.opacity = 0;
+                dummyImage.style.width = "1px";
+                dummyImage.style.height = "1px";
+                dummyImage.src = objMoodData.appStaticURL + path + fileName;
+                moodParentDiv.appendChild(dummyImage);
+
+                dummyImage.onload = function () {
+                    dummyImage.parentElement.removeChild(dummyImage);
+                    loadCount = loadCount + 1;
+                    if (loadCount == totalCount) callback();
+                };
+                dummyImage.onerror = function () {
+                    dummyImage.parentElement.removeChild(dummyImage);
+                    loadCount = loadCount + 1;
+                    if (loadCount == totalCount) callback();
+                };
+            } else {
+                loadCount = loadCount + 1;
+                if (loadCount == totalCount) callback();
+            }
+        }
+    } else {
+        callback();
+    }
+}
+
+function getThemeColor(parentDiv, className, attribute) {
+    let textDummy = document.createElement("div");
+    textDummy.className = className;
+    parentDiv.appendChild(textDummy);
+    let elementStyleColor = window.getComputedStyle(textDummy, null)[attribute];
+    // textDummy.remove();
+    return elementStyleColor;
+}
+
+function rgbConvert(rgb, isrgb = true) {
+    rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+    if (isrgb) return rgb && rgb.length === 4 ? "#" + ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2) : "";
+    else return rgb && rgb.length === 4 ? [rgb[1], rgb[2], rgb[3]] : [[255], [255], [255]];
+}
+
+function clearCanvas(canvasTransitionParent) {
+    if (!canvasTransitionParent) return;
+    let canvasDiv = canvasTransitionParent.getElementsByTagName("canvas");
+    if (canvasDiv && canvasDiv.length > 0) {
+        const context = canvasDiv[0].getContext("2d");
+        if (context) context.clearRect(0, 0, canvasDiv[0].width, canvasDiv[0].height);
+        else if (canvasDiv[0].context) canvasDiv[0].context.clearRect(0, 0, canvasDiv[0].width, canvasDiv[0].height);
+    }
+}
+
+//Getting transition name functions based on animation type start
+function getLayoutNameForLoopTransition(localIndex) {
+    localIndex = localIndex + (isPrevious ? -1 : 1);
+    if (localIndex < 0) localIndex = 13;
+    if (localIndex > 17) localIndex = 0;
+
+    let transName = "righttoleft";
+    if (localIndex % 18 == 0) transName = "center";
+    else if (localIndex % 18 == 1) transName = "lefttoright";
+    else if (localIndex % 18 == 2) transName = "righttoleft";
+    else if (localIndex % 18 == 3) transName = "toptobottom";
+    else if (localIndex % 18 == 4) transName = "bottomtotop";
+    else if (localIndex % 18 == 5) transName = "fadein";
+    else if (localIndex % 18 == 6) transName = "zoomin";
+    else if (localIndex % 18 == 7) transName = "zoomout";
+    else if (localIndex % 18 == 8) transName = "zoominout";
+    else if (localIndex % 18 == 9) transName = "zoomoutin";
+    else if (localIndex % 18 == 10) transName = "diagonaltopleft";
+    else if (localIndex % 18 == 11) transName = "diagonaltopright";
+    else if (localIndex % 18 == 12) transName = "diagonalbottomleft";
+    else if (localIndex % 18 == 13) transName = "diagonalbottomright";
+    else if (localIndex % 18 == 14) transName = "diagonaltopleftreverse";
+    else if (localIndex % 18 == 15) transName = "diagonaltoprightreverse";
+    else if (localIndex % 18 == 16) transName = "diagonalbottomleftreverse";
+    else if (localIndex % 18 == 17) transName = "diagonalbottomrightreverse";
+    return [transName, localIndex];
+}
+function getLayoutNameForLoopArrayTransition(localIndex, isPrevious, loopCount, loopArray) {
+    localIndex = localIndex + (isPrevious ? -1 : 1);
+
+    if (localIndex > loopCount - 1) localIndex = 0;
+    if (localIndex < 0) localIndex = loopCount - 1;
+
+    let transNameIndex = localIndex + (isPrevious ? 1 : 0);
+    if (transNameIndex >= loopCount) transNameIndex = 0;
+    let transName = loopArray[transNameIndex] ? loopArray[transNameIndex] : "righttoleft";
+    return [transName, localIndex];
+}
+function getLayoutNameForMoodShapeTransition(slideContent, animation) {
+    let transName = "righttoleft";
+    let layoutName = "";
+
+    //Getting layout name based on mood bg shapes
+    if (slideContent && slideContent.querySelector("[id='LAYOUT_SHAPE']")) {
+        let layoutShape = slideContent.querySelector("[id='LAYOUT_SHAPE']");
+        if (layoutShape && layoutShape.hasAttribute("data-layoutshape-type")) layoutName = layoutShape.getAttribute("data-layoutshape-type");
+    }
+
+    // Getting animation depends on asset/layouts from Mood Json
+    let animationRightToLeft = animation.righttoleft.layouts.split(",");
+    let animationLeftToRight = animation.lefttoright.layouts.split(",");
+    let animationTopToBottom = animation.toptobottom.layouts.split(",");
+    let animationBottomToTop = animation.bottomtotop.layouts.split(",");
+    let animationZoomIn = animation.zoomin.layouts.split(",");
+    let animationZoomOut = animation.zoomout.layouts.split(",");
+    let animationZoomInOut = animation.zoominout.layouts.split(",");
+    let animationZoomOutIn = animation.zoomoutin.layouts.split(",");
+    let animationFadeIn = animation.fadein.layouts.split(",");
+    let animationCenter = animation.center.layouts.split(",");
+    let animationDiagonalTL = animation.diagonaltopleft.layouts.split(",");
+    let animationDiagonalTR = animation.diagonaltopright.layouts.split(",");
+    let animationDiagonalBL = animation.diagonalbottomleft.layouts.split(",");
+    let animationDiagonalBR = animation.diagonalbottomright.layouts.split(",");
+    let animationDiagonalTLreverse = animation.diagonaltopleftreverse.layouts.split(",");
+    let animationDiagonalTRreverse = animation.diagonaltoprightreverse.layouts.split(",");
+    let animationDiagonalBLreverse = animation.diagonalbottomleftreverse.layouts.split(",");
+    let animationDiagonalBRreverse = animation.diagonalbottomrightreverse.layouts.split(",");
+
+    let isRightToLeft = animationRightToLeft.filter((obj) => obj == layoutName);
+    let isLeftToRight = animationLeftToRight.filter((obj) => obj == layoutName);
+    let isTopToBottom = animationTopToBottom.filter((obj) => obj == layoutName);
+    let isBottomToTop = animationBottomToTop.filter((obj) => obj == layoutName);
+    let isZoomIn = animationZoomIn.filter((obj) => obj == layoutName);
+    let isZoomOut = animationZoomOut.filter((obj) => obj == layoutName);
+    let isZoomInOut = animationZoomInOut.filter((obj) => obj == layoutName);
+    let isZoomOutIn = animationZoomOutIn.filter((obj) => obj == layoutName);
+    let isFadeIn = animationFadeIn.filter((obj) => obj == layoutName);
+    let isCenter = animationCenter.filter((obj) => obj == layoutName);
+    let isDiagonalTL = animationDiagonalTL.filter((obj) => obj == layoutName);
+    let isDiagonalTR = animationDiagonalTR.filter((obj) => obj == layoutName);
+    let isDiagonalBL = animationDiagonalBL.filter((obj) => obj == layoutName);
+    let isDiagonalBR = animationDiagonalBR.filter((obj) => obj == layoutName);
+    let isDiagonalTLreverse = animationDiagonalTLreverse.filter((obj) => obj == layoutName);
+    let isDiagonalTRreverse = animationDiagonalTRreverse.filter((obj) => obj == layoutName);
+    let isDiagonalBLreverse = animationDiagonalBLreverse.filter((obj) => obj == layoutName);
+    let isDiagonalBRreverse = animationDiagonalBRreverse.filter((obj) => obj == layoutName);
+
+    if (isRightToLeft.length > 0) transName = "righttoleft";
+    else if (isLeftToRight.length > 0) transName = "lefttoright";
+    else if (isTopToBottom.length > 0) transName = "toptobottom";
+    else if (isBottomToTop.length > 0) transName = "bottomtotop";
+    else if (isZoomIn.length > 0) transName = "zoomin";
+    else if (isZoomOut.length > 0) transName = "zoomout";
+    else if (isZoomInOut.length > 0) transName = "zoominout";
+    else if (isZoomOutIn.length > 0) transName = "zoomoutin";
+    else if (isFadeIn.length > 0) transName = "fadein";
+    else if (isCenter.length > 0) transName = "center";
+    else if (isDiagonalTL.length > 0) transName = "diagonaltopleft";
+    else if (isDiagonalTR.length > 0) transName = "diagonaltopright";
+    else if (isDiagonalBL.length > 0) transName = "diagonalbottomleft";
+    else if (isDiagonalBR.length > 0) transName = "diagonalbottomright";
+    else if (isDiagonalTLreverse.length > 0) transName = "diagonaltopleftreverse";
+    else if (isDiagonalTRreverse.length > 0) transName = "diagonaltoprightreverse";
+    else if (isDiagonalBLreverse.length > 0) transName = "diagonalbottomleftreverse";
+    else if (isDiagonalBRreverse.length > 0) transName = "diagonalbottomrightreverse";
+    else transName = "righttoleft";
+
+    return transName;
+}
+function getLayoutNameForReverseTransition(transitionType, transName, isPrevious, tempTransName) {
+    if (transitionType == "loop" || transitionType == "looparray" || transitionType == "moodshapebased") {
+        if (isPrevious && transName == "righttoleft") transName = "lefttoright";
+        else if (isPrevious && transName == "lefttoright") transName = "righttoleft";
+        else if (isPrevious && transName == "toptobottom") transName = "bottomtotop";
+        else if (isPrevious && transName == "bottomtotop") transName = "toptobottom";
+        else if (isPrevious && transName == "zoomin") transName = "zoomout";
+        else if (isPrevious && transName == "zoomout") transName = "zoomin";
+        else if (isPrevious && transName == "zoomoutin") transName = "zoominout";
+        else if (isPrevious && transName == "diagonaltopleft") transName = "diagonaltopleftreverse";
+        else if (isPrevious && transName == "diagonaltopright") transName = "diagonaltoprightreverse";
+        else if (isPrevious && transName == "diagonalbottomleft") transName = "diagonalbottomleftreverse";
+        else if (isPrevious && transName == "diagonalbottomright") transName = "diagonalbottomrightreverse";
+    } else {
+        if (!isPrevious && tempTransName) transName = tempTransName;
+        if (!tempTransName) tempTransName = transName;
+        if (isPrevious && tempTransName == "righttoleft") transName = "lefttoright";
+        else if (isPrevious && tempTransName == "lefttoright") transName = "righttoleft";
+        else if (isPrevious && tempTransName == "toptobottom") transName = "bottomtotop";
+        else if (isPrevious && tempTransName == "bottomtotop") transName = "toptobottom";
+        else if (isPrevious && tempTransName == "zoomin") transName = "zoomout";
+        else if (isPrevious && tempTransName == "zoomout") transName = "zoomin";
+        else if (isPrevious && tempTransName == "zoomoutin") transName = "zoominout";
+        else if (isPrevious && tempTransName == "diagonaltopleft") transName = "diagonaltopleftreverse";
+        else if (isPrevious && tempTransName == "diagonaltopright") transName = "diagonaltoprightreverse";
+        else if (isPrevious && tempTransName == "diagonalbottomleft") transName = "diagonalbottomleftreverse";
+        else if (isPrevious && tempTransName == "diagonalbottomright") transName = "diagonalbottomrightreverse";
+    }
+    return [transName, tempTransName];
+}
+//Getting transition name functions based on animation type end
+
+//Doing animation based on type for slides
+function doTransitionAnimationCommon(showSlide, hideSlide, transName, playMoodTransition, isStart, isSameZindex = false, objNodes, showSlideBg, hideSlideBg) {
+    showSlide.style.removeProperty("opacity");
+    showSlide.style.removeProperty("transition");
+    if (showSlideBg) {
+        showSlideBg.style.removeProperty("opacity");
+        showSlideBg.style.removeProperty("transition");
+        showSlideBg.style.zIndex = 1;
+    }
+    showSlide.style.zIndex = 1;
+    hideSlide.style.zIndex = isSameZindex ? 0 : 0;
+    if (hideSlideBg) hideSlideBg.style.zIndex = isSameZindex ? 0 : 0;
+
+    // if (!playMoodTransition) {
+    //     showSlide.style.zIndex = 1;
+    //     hideSlide.style.zIndex = 0;
+    // }
+
+    if (transName == "center") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationFadeInHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationFadeInHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationFadeInHide");
+        }
+        showSlide.classList.add("slideAnimationCenter");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationCenter");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationCenter");
+    } else if (transName == "righttoleft") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationRtLHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationRtLHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationRtLHide");
+        }
+        showSlide.classList.add("slideAnimationRtL");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationRtL");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationRtL");
+    } else if (transName == "lefttoright") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationLtRHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationLtRHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationLtRHide");
+        }
+        showSlide.classList.add("slideAnimationLtR");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationLtR");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationLtR");
+    } else if (transName == "toptobottom") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationTtBHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationTtBHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationTtBHide");
+        }
+        showSlide.classList.add("slideAnimationTtB");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationTtB");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationTtB");
+    } else if (transName == "bottomtotop") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationBtTHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationBtTHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationBtTHide");
+        }
+        showSlide.classList.add("slideAnimationBtT");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationBtT");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationBtT");
+    } else if (transName == "fadein") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationFadeInHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationFadeInHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationFadeInHide");
+        }
+        showSlide.classList.add("slideAnimationFadeIn");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationFadeIn");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationFadeIn");
+    } else if (transName == "diagonaltopleft") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalTLHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalTLHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalTLHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalTL");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalTL");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalTL");
+    } else if (transName == "diagonaltopright") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalTRHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalTRHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalTRHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalTR");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalTR");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalTR");
+    } else if (transName == "diagonalbottomleft") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalBLHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalBLHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalBLHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalBL");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalBL");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalBL");
+    } else if (transName == "diagonalbottomright") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalBRHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalBRHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalBRHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalBR");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalBR");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalBR");
+    } else if (transName == "diagonaltopleftreverse") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalTLreverseHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalTLreverseHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalTLreverseHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalTLreverse");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalTLreverse");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalTLreverse");
+    } else if (transName == "diagonaltoprightreverse") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalTRreverseHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalTRreverseHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalTRreverseHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalTRreverse");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalTRreverse");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalTRreverse");
+    } else if (transName == "diagonalbottomleftreverse") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalBLreverseHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalBLreverseHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalBLreverseHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalBLreverse");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalBLreverse");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalBLreverse");
+    } else if (transName == "diagonalbottomrightreverse") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationDiagonalBRreverseHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationDiagonalBRreverseHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationDiagonalBRreverseHide");
+        }
+        showSlide.classList.add("slideAnimationDiagonalBRreverse");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationDiagonalBRreverse");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationDiagonalBRreverse");
+    } else if (transName == "fadein") {
+        if (isStart == false) {
+            hideSlide.classList.add("slideAnimationFadeInHide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideAnimationFadeInHide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideAnimationFadeInHide");
+        }
+        showSlide.classList.add("slideAnimationFadeIn");
+        if (showSlideBg) showSlideBg.classList.add("slideAnimationFadeIn");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("slideAnimationFadeIn");
+    } else if (transName.includes("zoom")) {
+        let transitionTypeName = transName == "zoomin" ? "In" : transName == "zoominout" ? "InOut" : transName == "zoomoutin" ? "OutIn" : "Out";
+        showSlide.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        if (showSlideBg) showSlideBg.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        showSlide.classList.remove("slideZoom" + transitionTypeName + "Show");
+        if (showSlideBg) showSlideBg.classList.remove("slideZoom" + transitionTypeName + "Show");
+        if (objNodes?.showNode) objNodes.showNode.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        if (objNodes?.showNode) objNodes.showNode.classList.remove("slideZoom" + transitionTypeName + "Show");
+
+        hideSlide.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        if (hideSlideBg) hideSlideBg.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        hideSlide.classList.remove("slideZoom" + transitionTypeName + "Show");
+        if (hideSlideBg) hideSlideBg.classList.remove("slideZoom" + transitionTypeName + "Show");
+        if (objNodes?.hideNode) objNodes.hideNode.classList.remove("slideZoom" + transitionTypeName + "Hide");
+        if (objNodes?.hideNode) objNodes.hideNode.classList.remove("slideZoom" + transitionTypeName + "Show");
+
+        if (isStart == true) {
+            showSlide.classList.add("slideZoom" + transitionTypeName + "Show");
+            if (showSlideBg) showSlideBg.classList.add("slideZoom" + transitionTypeName + "Show");
+            if (objNodes?.showNode) objNodes.showNode.classList.add("slideZoom" + transitionTypeName + "Show");
+        } else {
+            showSlide.classList.add("slideZoom" + transitionTypeName + "Show");
+            if (showSlideBg) showSlideBg.classList.add("slideZoom" + transitionTypeName + "Show");
+            if (objNodes?.showNode) objNodes.showNode.classList.add("slideZoom" + transitionTypeName + "Show");
+            hideSlide.classList.add("slideZoom" + transitionTypeName + "Hide");
+            if (hideSlideBg) hideSlideBg.classList.add("slideZoom" + transitionTypeName + "Hide");
+            if (objNodes?.hideNode) objNodes.hideNode.classList.add("slideZoom" + transitionTypeName + "Hide");
+        }
+    }
+
+    if (playMoodTransition == false) {
+        showSlide.classList.add("noAnimation");
+        if (showSlideBg) showSlideBg.classList.add("noAnimation");
+        hideSlide.classList.add("noAnimation");
+        if (hideSlideBg) hideSlideBg.classList.add("noAnimation");
+        if (objNodes?.showNode) objNodes.showNode.classList.add("noAnimation");
+        if (objNodes?.hideNode) objNodes.hideNode.classList.add("noAnimation");
+    } else {
+        showSlide.classList.remove("noAnimation");
+        if (showSlideBg) showSlideBg.classList.remove("noAnimation");
+        hideSlide.classList.remove("noAnimation");
+        if (hideSlideBg) hideSlideBg.classList.remove("noAnimation");
+        if (objNodes?.showNode) objNodes.showNode.classList.remove("noAnimation");
+        if (objNodes?.hideNode) objNodes.hideNode.classList.remove("noAnimation");
+    }
+
+    let durationValue = parseFloat(window.getComputedStyle(showSlide).animationDuration) * 1000;
+    let delayValue = parseFloat(window.getComputedStyle(showSlide).animationDelay) * 1000;
+    let totalTime = durationValue + delayValue;
+    return totalTime;
+}
+
+//getting slide type from slide
+function getSlideType(slideContent) {
+    let currentSlideType = slideContent.getAttribute("data-slidetype");
+    if (currentSlideType == "diagram" || currentSlideType == "chart") {
+        let assetName = slideContent.hasAttribute("data-slidetype") ? slideContent.getAttribute("data-slidetype") : null;
+        if (assetName && assetName.split("-").length > 1) {
+            let arrName = assetName.split("-");
+            assetName = arrName[0] + "-" + arrName[1];
+        }
+        return assetName ? assetName : currentSlideType;
+    }
+    return currentSlideType;
+}
+
+var dateFormatSG = (function () {
+    var token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
+        timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
+        timezoneClip = /[^-+\dA-Z]/g,
+        pad = function (val, len) {
+            val = String(val);
+            len = len || 2;
+            while (val.length < len) val = "0" + val;
+            return val;
+        };
+
+    // Regexes and supporting functions are cached through closure
+    return function (date, mask, utc) {
+        var dF = dateFormatSG;
+
+        // You can't provide utc if you skip other args (use the "UTC:" mask prefix)
+        if (arguments.length == 1 && Object.prototype.toString.call(date) == "[object String]" && !/\d/.test(date)) {
+            mask = date;
+            date = undefined;
+        }
+
+        // Passing date through Date applies Date.parse, if necessary
+        date = date ? new Date(date) : new Date();
+        if (isNaN(date)) throw SyntaxError("invalid date");
+
+        mask = String(dF.masks[mask] || mask || dF.masks["default"]);
+
+        // Allow setting the utc argument via the mask
+        if (mask.slice(0, 4) == "UTC:") {
+            mask = mask.slice(4);
+            utc = true;
+        }
+
+        var _ = utc ? "getUTC" : "get",
+            d = date[_ + "Date"](),
+            D = date[_ + "Day"](),
+            m = date[_ + "Month"](),
+            y = date[_ + "FullYear"](),
+            H = date[_ + "Hours"](),
+            M = date[_ + "Minutes"](),
+            s = date[_ + "Seconds"](),
+            L = date[_ + "Milliseconds"](),
+            o = utc ? 0 : date.getTimezoneOffset(),
+            flags = {
+                d: d,
+                dd: pad(d),
+                ddd: dF.i18n.dayNames[D],
+                dddd: dF.i18n.dayNames[D + 7],
+                m: m + 1,
+                mm: pad(m + 1),
+                mmm: dF.i18n.monthNames[m],
+                mmmm: dF.i18n.monthNames[m + 12],
+                yy: String(y).slice(2),
+                yyyy: y,
+                h: H % 12 || 12,
+                hh: pad(H % 12 || 12),
+                H: H,
+                HH: pad(H),
+                M: M,
+                MM: pad(M),
+                s: s,
+                ss: pad(s),
+                l: pad(L, 3),
+                L: pad(L > 99 ? Math.round(L / 10) : L),
+                t: H < 12 ? "a" : "p",
+                tt: H < 12 ? "am" : "pm",
+                T: H < 12 ? "A" : "P",
+                TT: H < 12 ? "AM" : "PM",
+                Z: utc ? "UTC" : (String(date).match(timezone) || [""]).pop().replace(timezoneClip, ""),
+                o: (o > 0 ? "-" : "+") + pad(Math.floor(Math.abs(o) / 60) * 100 + (Math.abs(o) % 60), 4),
+                S: ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (((d % 100) - (d % 10) != 10) * d) % 10],
+            };
+
+        return mask.replace(token, function ($0) {
+            return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
+        });
+    };
+})();
+
+// Some common format strings
+dateFormatSG.masks = {
+    default: "ddd mmm dd yyyy HH:MM:ss",
+    shortDate: "m/d/yy",
+    mediumDate: "mmm d, yyyy",
+    longDate: "mmmm d, yyyy",
+    fullDate: "dddd, mmmm d, yyyy",
+    shortTime: "h:MM TT",
+    mediumTime: "h:MM:ss TT",
+    longTime: "h:MM:ss TT Z",
+    isoDate: "yyyy-mm-dd",
+    isoTime: "HH:MM:ss",
+    isoDateTime: "yyyy-mm-dd'T'HH:MM:ss",
+    isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'",
+};
+
+// Internationalization strings
+dateFormatSG.i18n = {
+    dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+};
+
+// For convenience...
+Date.prototype.formatSG = function (mask, utc) {
+    return dateFormatSG(this, mask, utc);
+};
+
+function createVideoIntroNodeCommon(videoProps, moodParentDiv, commonLoadCompleteCallback, objMoodData) {
+    let playMoodTransition = objMoodData?.playAnimation != null && objMoodData?.playAnimation != undefined ? objMoodData.playAnimation : true;
+    if (!playMoodTransition) {
+        commonLoadCompleteCallback();
+        return;
+    }
+    if (!videoProps && objMoodData && objMoodData?.fullAssets?.filter((obj) => obj.id == "introvideo")?.length > 0) videoProps = objMoodData.fullAssets.filter((obj) => obj.id == "introvideo")[0];
+    if (videoProps) {
+        objMoodData.hasIntroVideo = true;
+        let videoAnimDiv = document.createElement("video");
+        videoAnimDiv.id = "videoAnimDiv";
+        videoAnimDiv.className = "videoAnimDiv";
+        // videoAnimDiv.src = objMoodData.appStaticURL + videoProps.url;
+        videoAnimDiv.setAttribute("muted", "muted");
+        videoAnimDiv.setAttribute("playsinline", "playsinline");
+        videoAnimDiv.setAttribute("autoplay", "false");
+        videoAnimDiv.style.zIndex = 10;
+        videoAnimDiv.setAttribute("loop", false);
+        videoAnimDiv.setAttribute("preload", "auto");
+        videoAnimDiv.setAttribute("webkit-playsinline", "webkit-playsinline");
+        moodParentDiv.appendChild(videoAnimDiv);
+        videoAnimDiv.style.opacity = 0;
+
+        let videoSrc = objMoodData.appStaticURL + videoProps.url;
+        // Add Webm source for wider browser compatibility
+        const webmSourceElem = document.createElement("source");
+        webmSourceElem.setAttribute("src", videoSrc);
+        webmSourceElem.setAttribute("type", "video/webm");
+        videoAnimDiv.appendChild(webmSourceElem);
+
+        // Add MP4 source for wider browser compatibility
+        const mp4SourceElem = document.createElement("source");
+        mp4SourceElem.setAttribute("src", videoSrc.replace(".webm", ".mp4"));
+        mp4SourceElem.setAttribute("type", "video/mp4");
+        videoAnimDiv.appendChild(mp4SourceElem);
+
+        videoAnimDiv.addEventListener("loadeddata", function () {
+            try {
+                // this.pause();
+                // this.currentTime = 0;
+                videoAnimDiv.playbackRate = 3.0;
+                videoAnimDiv.muted = true;
+                videoAnimDiv.play();
+                videoAnimDiv.ontimeupdate = (event) => {
+                    console.log(videoAnimDiv.currentTime);
+                    if (videoAnimDiv.currentTime >= videoAnimDiv.duration - 2) {
+                        videoAnimDiv.pause();
+                        videoAnimDiv.currentTime = 0;
+                        videoAnimDiv.playbackRate = 1.0;
+                        videoAnimDiv.ontimeupdate = null;
+                        commonLoadCompleteCallback();
+                    }
+                };
+            } catch (error) {
+                commonLoadCompleteCallback();
+            }
+        });
+        videoAnimDiv.addEventListener("error", function () {
+            commonLoadCompleteCallback();
+        });
+    } else commonLoadCompleteCallback();
+}
+function playIntroAnimationCommon(moodParentDiv, videoProps, playMoodTransition, isStart, animationParent, slideIndex = 0, objMoodData) {
+    // Intro video play
+    let videoAnimDiv = moodParentDiv.querySelector("[id='videoAnimDiv']");
+    let lottieAnimDiv = animationParent ? animationParent : moodParentDiv.querySelector("[id='lottieAnimDiv']");
+    if (videoAnimDiv && videoProps && playMoodTransition && isStart && slideIndex == 0) {
+        let zorder = videoProps.zorder ? videoProps.zorder : null;
+        if (zorder) {
+            if (zorder[0] == "video") {
+                videoAnimDiv.style.zIndex = 11;
+                if (lottieAnimDiv) lottieAnimDiv.style.zIndex = 10;
+            }
+            if (zorder[0] == "lottie") {
+                videoAnimDiv.style.zIndex = 10;
+                if (lottieAnimDiv) lottieAnimDiv.style.zIndex = 11;
+            }
+        }
+        videoAnimDiv.style.removeProperty("opacity");
+        videoAnimDiv.muted = true;
+        // Intro video start event dispatch listener
+        if (objMoodData?.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(true);
+        videoAnimDiv.play();
+        let keyFrame = videoProps.keyframes;
+        videoAnimDiv.style.transition = "all " + keyFrame?.duration + "s " + keyFrame?.delay + "s " + keyFrame?.effect;
+        setTimeout(() => {
+            // Intro video end event dispatch listener
+            if (objMoodData?.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(false);
+            if (keyFrame) {
+                let transFormVal = keyFrame.transform || [0, 0];
+                let scale = keyFrame.scale || [1, 1];
+                videoAnimDiv.style.transform = "translate(" + transFormVal[0] + "px," + transFormVal[1] + "px) scale(" + scale[0] + "," + scale[1] + ")";
+                videoAnimDiv.style.opacity = keyFrame.opacity != null && keyFrame.opacity != undefined ? keyFrame.opacity : 1;
+            }
+        }, (videoProps?.hidevideoframeinsec || 0) * 1000);
+    }
+}

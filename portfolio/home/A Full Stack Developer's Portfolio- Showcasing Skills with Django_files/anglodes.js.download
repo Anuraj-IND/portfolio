@@ -1,0 +1,284 @@
+function anglodes(objMoodData) {
+    let parentDiv = objMoodData.parentDiv;
+    let moodParentDiv;
+    let localIndex = 0;
+    let localStaticIndex = 0;
+    let lottieAnimation;
+    let isStarting = true;
+    let isStart = true;
+    // Mood transition with animation or without animation key from objMood data
+    let playMoodTransition = objMoodData.playAnimation != null && objMoodData.playAnimation != undefined ? objMoodData.playAnimation : true;
+    let slideAnimType = objMoodData.animationtype;
+    let lastTheme = "themeWhitebg";
+
+    let imageLoadComplete = false;
+    let videoLoadComplete = false;
+
+    let videoProps = objMoodData.fullAssets?.filter((obj) => obj.id == "introvideo")?.length > 0 ? objMoodData.fullAssets.filter((obj) => obj.id == "introvideo")[0] : null;
+    let animationData = objMoodData.fullAssets?.filter((obj) => obj.id == "CssMoodData")?.length > 0 ? objMoodData.fullAssets.filter((obj) => obj.id == "CssMoodData")[0] : null;
+
+    let transName = "default";
+
+    anglodes.prototype.updateAnimationType = function (doAnimation) {
+        playMoodTransition = doAnimation;
+    };
+
+    anglodes.prototype.createMood = function () {
+        if (parentDiv) {
+            if (objMoodData.updateProgress) objMoodData.updateProgress(true, "moodjs");
+            clearParentChilds(parentDiv);
+
+            // Creating main parent for moods all layouts.
+            moodParentDiv = document.createElement("div");
+            moodParentDiv.id = "moodParentDiv";
+            moodParentDiv.className = "themeWhitebg moodParentDiv";
+            moodParentDiv.setAttribute("data-theme-palette", "multiple");
+
+            // Creating style tag for transition and slide animation
+            let style = document.createElement("style");
+            style.id = "CssAnimStyle";
+            moodParentDiv.appendChild(style);
+
+            parentDiv.appendChild(moodParentDiv);
+
+            createVideoIntroNodeCommon(videoProps, moodParentDiv, this.videoLoadCallbackCommon, objMoodData);
+
+            // Creating Transition Elements
+            this.createTransitionElements(moodParentDiv);
+
+            commonImageLoadTransition(objMoodData.animationJSON, moodParentDiv, this.imageLoadCallbackCommon, objMoodData);
+        }
+    };
+
+    anglodes.prototype.imageLoadCallbackCommon = function () {
+        imageLoadComplete = true;
+        commonLoadCompleteCallback();
+    };
+
+    anglodes.prototype.videoLoadCallbackCommon = function () {
+        videoLoadComplete = true;
+        commonLoadCompleteCallback();
+    };
+
+    function commonLoadCompleteCallback() {
+        if (videoLoadComplete && imageLoadComplete) {
+            if (objMoodData.updateProgress) objMoodData.updateProgress(false, "moodjs");
+            objMoodData.callback(objMoodData.slideId);
+        }
+    }
+
+    anglodes.prototype.createTransitionElements = function (moodParentDiv) {
+        //Create transition elements
+        let transitionParent = document.createElement("div");
+        transitionParent.id = "transitionParent";
+        transitionParent.className = "transitionParent";
+        transitionParent.style.pointerEvents = "none";
+        transitionParent.style.setProperty("background", "unset", "important");
+        moodParentDiv.appendChild(transitionParent);
+
+        let lottieAnimDiv = document.createElement("div");
+        lottieAnimDiv.id = "lottieAnimDiv";
+        lottieAnimDiv.style.zIndex = "10";
+        lottieAnimDiv.className = "lottieAnimDiv";
+        lottieAnimDiv.style.setProperty("background-color", "transparent", "important");
+        lottieAnimDiv.style.setProperty("background-image", "unset", "important");
+        lottieAnimDiv.style.setProperty("background", "unset", "important");
+        transitionParent.appendChild(lottieAnimDiv);
+
+        this.initLottie();
+    };
+
+    anglodes.prototype.initLottie = function () {
+        let animation = objMoodData.animationJSON.filter((obj) => obj.id == "transition");
+        let lottieAnimDiv = moodParentDiv.querySelector("[id='lottieAnimDiv']");
+        lottieAnimDiv.innerHTML = "";
+
+        if (animation && animation[0]) {
+            let jsonData = animation[0].data;
+            this.framesData = jsonData.flow;
+            this.framesCount = jsonData.fr ? jsonData.fr : 30;
+            this.placeholderstartanimation = jsonData.placeholderstartanimation;
+
+            let params = {
+                container: lottieAnimDiv,
+                renderer: "svg",
+                loop: false,
+                autoplay: false,
+                progressiveLoad: false,
+                animationData: jsonData,
+            };
+            lottieAnimation = bodymovin.loadAnimation(params);
+        }
+    };
+
+    anglodes.prototype.callStartAnimation = function (slideContent, slideIndex, callback, slideAddCompleteCallback, isPrevious, transitionEndCallback) {
+        parentDiv.classList.add("widgetViewPaused");
+        slideContent.setAttribute("data-islottie", "true");
+        //SETTING UP SLIDE type
+        this.slideType = "";
+        if (slideContent && slideContent.dataset && slideContent.dataset.slidetype) this.slideType = slideContent.dataset.slidetype;
+
+        //Coverpage Intro lottie animation
+        this.introDelay = 0;
+        if (isPrevious != true && isStart == true && slideIndex == 0) {
+            let objData = createIntroForCoverPage(moodParentDiv, objMoodData.animationJSON, objMoodData.playAnimation, "", slideContent, objMoodData, "commonLayout " + objMoodData.moodData.name);
+            if (objData) {
+                this.objData = objData;
+
+                if (objMoodData.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(true);
+
+                objData.lottieAnimation.playSegments([0, objData.endFrame ? objData.endFrame : 0], true);
+
+                objData.lottieAnimation.addEventListener("complete", () => {
+                    if (objMoodData.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(false);
+                    objData.lottieAnimation.removeEventListener("complete");
+                });
+            }
+            playIntroAnimationCommon(moodParentDiv, videoProps, playMoodTransition, isStart, null, this.slideIndex);
+        }
+        this.introDelay = !playMoodTransition ? 0 : isStart == true && slideIndex == 0 && videoProps?.graphicstart ? parseFloat(videoProps?.graphicstart || 0) * 1000 : this.objData?.introdelay && isStart == true ? this.objData.introdelay : 0;
+
+        if (this.introDelay == 0) this.addSlideInMoodParent(slideContent, slideIndex, callback, slideAddCompleteCallback, isPrevious, transitionEndCallback);
+        else
+            setTimeout(() => {
+                this.addSlideInMoodParent(slideContent, slideIndex, callback, slideAddCompleteCallback, isPrevious, transitionEndCallback);
+            }, this.introDelay);
+    };
+
+    anglodes.prototype.addSlideInMoodParent = function (slideContent, slideIndex, callback, slideAddCompleteCallback, isPrevious, transitionEndCallback) {
+        this.transitionEndCallback = transitionEndCallback;
+        //Init variables
+        let showgraphicDelay = 0;
+        this.hidegraphicDelay = 0;
+
+        let totalFrames = this.framesData.length;
+        // Finding lottie animtion timing using index and looping the timing
+        this.lottieTime = this.framesData[localIndex] ? this.framesData[localIndex] : this.framesData[0] ? this.framesData[0] : null;
+        showgraphicDelay = this.placeholderstartanimation && this.placeholderstartanimation[localIndex] ? (this.placeholderstartanimation[localIndex] - this.lottieTime[0]) / this.framesCount : showgraphicDelay;
+
+        let placeholderIndex = localIndex;
+        this.placeholderIndex = placeholderIndex;
+        localIndex++;
+        localStaticIndex++;
+        if (localIndex > totalFrames - 1) {
+            localIndex = 1;
+            if (localStaticIndex != 2 || totalFrames != 2) isStarting = false;
+        }
+
+        moodParentDiv.setAttribute("data-theme-palette", slideContent.getAttribute("data-theme-palette"));
+        moodParentDiv.setAttribute("data-theme-tint", slideContent.hasAttribute("data-theme-tint") ? slideContent.getAttribute("data-theme-tint") : "");
+        lastTheme = slideContent.hasAttribute("data-theme-group-name") ? slideContent.getAttribute("data-theme-group-name") : "";
+        moodParentDiv.className = lastTheme + " moodParentDiv";
+
+        let lottieAnimDiv = moodParentDiv.querySelector("[id='lottieAnimDiv']");
+        let arrCurrentPlaceHolder = lottieAnimDiv.querySelectorAll("[data-layer-name='PLACEHOLDER" + (placeholderIndex + 1) + "']");
+        let arrPreviousPlaceHolder = lottieAnimDiv.querySelectorAll("[data-layer-name='PLACEHOLDER" + placeholderIndex + "']");
+
+        transName = "placeholder" + (placeholderIndex + 1);
+        if (!animationData?.data || (animationData?.data && !JSON.parse(animationData.data)?.[transName])) transName = "default";
+
+        //While looping change 5th slide content to firstslide and loop will start from 2nd slide.
+        let firstPlaceHolder = lottieAnimDiv.querySelectorAll("[data-layer-name='PLACEHOLDER1']");
+        if (localIndex == (totalFrames == 2 ? 1 : 2) && isStarting == false) {
+            let lastPlaceHolder = lottieAnimDiv.querySelectorAll("[data-layer-name='PLACEHOLDER" + totalFrames + "']");
+            if (firstPlaceHolder && lastPlaceHolder && lastPlaceHolder.length > 0) {
+                let index = lastPlaceHolder[1] ? 1 : 0;
+                firstPlaceHolder[index].innerHTML = "";
+                firstPlaceHolder[0].style.opacity = 1;
+                firstPlaceHolder[0].style.display = "block";
+
+                let obj = lastPlaceHolder[index].getElementsByTagName("foreignObject");
+                if (obj.length > 0) {
+                    let slide = obj[0].querySelector("[data-type='SLIDE']");
+                    if (slide) {
+                        slide.removeAttribute("data-showhidegraphic");
+                        slide.removeAttribute("data-showhidetitle");
+                        slide.removeAttribute("data-showhidelayoutshape");
+                        let showMoodStyleNode = slide.querySelector("[id='ShowMoodStyleNode']");
+                        if (showMoodStyleNode) showMoodStyleNode.parentElement.removeChild(showMoodStyleNode);
+                        let hideMoodStyleNode = slide.querySelector("[id='HideMoodStyleNode']");
+                        if (hideMoodStyleNode) hideMoodStyleNode.parentElement.removeChild(hideMoodStyleNode);
+                    }
+                    firstPlaceHolder[index].appendChild(obj[0]);
+                    if (index == 1) lastPlaceHolder[index].parentElement.setAttribute("opacity", 0);
+                    if (lottieAnimation) lottieAnimation.playSegments([this.lottieTime[0] - 1, this.lottieTime[0]], true);
+                }
+            }
+        }
+
+        if (arrPreviousPlaceHolder.length > 0) {
+            let loopNodes = arrPreviousPlaceHolder[0].querySelectorAll("[data-loopanimation='true']");
+            for (let b = 0; b < loopNodes.length; b++) {
+                loopNodes[b].style.setProperty("animation-play-state", "paused");
+                let rotate = window.getComputedStyle(loopNodes[b]).transform;
+                loopNodes[b].style.transform = rotate;
+                loopNodes[b].style.animation = "unset";
+            }
+        }
+
+        //Adding slide into lottie with foreign object
+        for (let a = 0; a < arrCurrentPlaceHolder.length; a++) {
+            if (a == 1 || arrCurrentPlaceHolder.length == 1) {
+                arrCurrentPlaceHolder[a].innerHTML = "";
+                var ns = "http://www.w3.org/2000/svg";
+                let foreignObject = document.createElementNS(ns, "foreignObject");
+                foreignObject.id = "foreignObj";
+                foreignObject.setAttribute("width", objMoodData.slideWidth);
+                foreignObject.setAttribute("height", objMoodData.slideHeight);
+                foreignObject.setAttribute("x", "0");
+                foreignObject.setAttribute("y", "0");
+                foreignObject.appendChild(slideContent);
+                arrCurrentPlaceHolder[a].appendChild(foreignObject);
+                slideContent.setAttribute("data-transdelay", showgraphicDelay);
+                slideContent.style.setProperty("--transdelay", showgraphicDelay + "s");
+                slideAddCompleteCallback ? slideAddCompleteCallback() : "";
+                // Callback for show graphic start animation(start delay from Mood Json)
+                callback ? callback(0) : "";
+            }
+            // arrCurrentPlaceHolder[a].style.display = "block";
+        }
+        if (slideAnimType == "none") this.showTransitionAnimation();
+    };
+
+    anglodes.prototype.doTransitionAnimation = function () {
+        if (slideAnimType != "none") this.showTransitionAnimation();
+    };
+
+    anglodes.prototype.showTransitionAnimation = function () {
+        // console.log("----------- Doing Transition -----------")
+        setTimeout(() => {
+            //Playing lottie animation
+            if (lottieAnimation && this.lottieTime) lottieAnimation.playSegments([this.lottieTime[0], this.lottieTime[1]], true);
+            //  console.log("currentFrame - " + this.lottieTime[0] + "  -  " + this.lottieTime[1]);
+
+            parentDiv.classList.remove("widgetViewPaused");
+            
+            // Hide animation delay
+            objMoodData.transitionDelay ? objMoodData.transitionDelay(this.hidegraphicDelay * 1000) : "";
+            let lottieAnimDiv = moodParentDiv.querySelector("[id='lottieAnimDiv']");
+
+            let totalLottieAnimatingTime = this.lottieTime ? ((this.lottieTime[1] - this.lottieTime[0]) / 30) * 1000 : 0;
+            if (playMoodTransition == false) totalLottieAnimatingTime = 0;
+            if (this.transitionEndCallback)
+                setTimeout(() => {
+                    let arrAllPlaceHolder = lottieAnimDiv.getElementsByTagName("foreignObject");
+                    for (let b = 0; b < arrAllPlaceHolder.length; b++) {
+                        if (arrAllPlaceHolder[b] && !arrAllPlaceHolder[b].hasAttribute("data-charttype") && arrAllPlaceHolder[b].parentElement.getAttribute("data-layer-name") != "PLACEHOLDER" + (this.placeholderIndex + 1)) arrAllPlaceHolder[b].parentElement.removeChild(arrAllPlaceHolder[b]);
+                    }
+                    this.transitionEndCallback();
+                }, totalLottieAnimatingTime);
+            isStart = false;
+        }, 100);
+    };
+
+    anglodes.prototype.transitionReplay = function () {
+        isStart = true;
+        lastTheme = "";
+        moodParentDiv.className = "moodParentDiv";
+    };
+
+    anglodes.prototype.getMoodTransitionName = function () {
+        //Setting up current tranition name here for saravanan bro for animation related things in moodutil
+        return transName;
+    };
+}
